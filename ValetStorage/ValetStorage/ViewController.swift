@@ -16,10 +16,10 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil)
-        if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "walkthroughViewController")as? WalkThroughContentController{
-            present(walkthroughViewController, animated: true, completion: nil)
-        }
+//        let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil)
+//        if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "walkthroughViewController")as? WalkThroughContentController{
+//            present(walkthroughViewController, animated: true, completion: nil)
+//        }
     }
 
     override func didReceiveMemoryWarning() {
