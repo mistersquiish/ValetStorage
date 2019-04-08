@@ -11,6 +11,17 @@ import Alamofire
 import SwiftKeychainWrapper
 
 class LoginService{
+    
+    // enum to inform user of what form error
+    enum error {
+        case wrongPassword
+        case incompleteForm
+        case emailInUse
+        case shortPassword
+        case invalidEmail
+        case enterFullName
+    }
+    static var formError: error = error.incompleteForm
     private static var Manager: Alamofire.SessionManager = {
         
         // Create the server trust policies
@@ -37,84 +48,103 @@ class LoginService{
      */
     public static func login(email:String, password: String){
         
-        // Handle Authentication challenge
-        
-        let delegate: Alamofire.SessionDelegate = LoginService.Manager.delegate
-        delegate.sessionDidReceiveChallenge = { session, challenge in
-            var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
-            var credential: URLCredential?
-            if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
-                disposition = URLSession.AuthChallengeDisposition.useCredential
-                credential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
-            } else {
-                if challenge.previousFailureCount > 0 {
-                    disposition = .cancelAuthenticationChallenge
+        if email == "" || password == "" {
+            self.formError = error.incompleteForm
+        } else {
+            // Handle Authentication challenge
+            
+            let delegate: Alamofire.SessionDelegate = LoginService.Manager.delegate
+            delegate.sessionDidReceiveChallenge = { session, challenge in
+                var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
+                var credential: URLCredential?
+                if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
+                    disposition = URLSession.AuthChallengeDisposition.useCredential
+                    credential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
                 } else {
-                    credential = LoginService.Manager.session.configuration.urlCredentialStorage?.defaultCredential(for: challenge.protectionSpace)
-                    if credential != nil {
-                        disposition = .useCredential
+                    if challenge.previousFailureCount > 0 {
+                        disposition = .cancelAuthenticationChallenge
+                    } else {
+                        credential = LoginService.Manager.session.configuration.urlCredentialStorage?.defaultCredential(for: challenge.protectionSpace)
+                        if credential != nil {
+                            disposition = .useCredential
+                        }
                     }
                 }
+                return (disposition, credential)
             }
-            return (disposition, credential)
-        }
-        
-        //Web service Request
-        let parameters = [
-            "email": email,
-            "password": password,
-            ]
-        let header: HTTPHeaders = ["Accept": "application/json"]
-        LoginService.Manager.request("https://apistaging.valet.storage/signin", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
-            if response.result.isSuccess {
-                let data = response.result.value as? [String: Any]
-                TokenKeychain.updateAccessToken(accessToken: data!["token"] as! String)
-            } else {
-                debugPrint(response)
+            
+            //Web service Request
+            let parameters = [
+                "email": email,
+                "password": password,
+                ]
+            let header: HTTPHeaders = ["Accept": "application/json"]
+            LoginService.Manager.request("https://apistaging.valet.storage/signin", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
+                if response.result.isSuccess {
+                    let data = response.result.value as? [String: Any]
+                    TokenKeychain.updateAccessToken(accessToken: data!["token"] as! String)
+                } else {
+                    self.formError = error.wrongPassword
+                }
             }
         }
-        
-        
         
     }
     public static func signup(email:String, password: String, full_name: String) {
         
-        // Handle Authentication challenge
-        
-        let delegate: Alamofire.SessionDelegate = LoginService.Manager.delegate
-        delegate.sessionDidReceiveChallenge = { session, challenge in
-            var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
-            var credential: URLCredential?
-            if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
-                disposition = URLSession.AuthChallengeDisposition.useCredential
-                credential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
-            } else {
-                if challenge.previousFailureCount > 0 {
-                    disposition = .cancelAuthenticationChallenge
+        if email == "" || password == "" || full_name == "" {
+            self.formError = error.incompleteForm
+        } else if !full_name.contains(" ") {
+            self.formError = error.enterFullName
+        } else if !isValidEmail(testStr: email) {
+            self.formError = error.invalidEmail
+        } else if password.count < 8 {
+            self.formError = error.shortPassword
+        } else {
+            // Handle Authentication challenge
+            
+            let delegate: Alamofire.SessionDelegate = LoginService.Manager.delegate
+            delegate.sessionDidReceiveChallenge = { session, challenge in
+                var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
+                var credential: URLCredential?
+                if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
+                    disposition = URLSession.AuthChallengeDisposition.useCredential
+                    credential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
                 } else {
-                    credential = LoginService.Manager.session.configuration.urlCredentialStorage?.defaultCredential(for: challenge.protectionSpace)
-                    if credential != nil {
-                        disposition = .useCredential
+                    if challenge.previousFailureCount > 0 {
+                        disposition = .cancelAuthenticationChallenge
+                    } else {
+                        credential = LoginService.Manager.session.configuration.urlCredentialStorage?.defaultCredential(for: challenge.protectionSpace)
+                        if credential != nil {
+                            disposition = .useCredential
+                        }
                     }
                 }
+                return (disposition, credential)
             }
-            return (disposition, credential)
+            
+            //Web service Request
+            let parameters = [
+                "email": email,
+                "password": password,
+                "username": full_name
+            ]
+            let header: HTTPHeaders = ["Accept": "application/json"]
+            LoginService.Manager.request("https://apistaging.valet.storage/signup", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
+                if response.result.isSuccess {
+                    let data = response.result.value as? [String: Any]
+                    TokenKeychain.updateAccessToken(accessToken: data!["token"] as! String)
+                } else {
+                    self.formError = error.emailInUse
+                }
+            }
         }
+    }
+    
+    private static func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         
-        //Web service Request
-        let parameters = [
-            "email": email,
-            "password": password,
-            "username": full_name
-        ]
-        let header: HTTPHeaders = ["Accept": "application/json"]
-        LoginService.Manager.request("https://apistaging.valet.storage/signup", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
-            if response.result.isSuccess {
-                let data = response.result.value as? [String: Any]
-                TokenKeychain.updateAccessToken(accessToken: data!["token"] as! String)
-            } else {
-                debugPrint(response)
-            }
-        }
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
     }
 }

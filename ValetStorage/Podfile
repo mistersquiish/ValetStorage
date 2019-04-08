@@ -8,7 +8,6 @@ target 'ValetStorage' do
   # Pods for ValetStorage
   pod 'Alamofire'
   pod 'SwiftKeychainWrapper'
-  pod 'AnimatedTextInput', '~> 0.3.0'
 
   target 'ValetStorageTests' do
     inherit! :search_paths

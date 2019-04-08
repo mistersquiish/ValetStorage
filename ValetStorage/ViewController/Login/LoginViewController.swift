@@ -16,13 +16,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButtonOutlet: UIButton!
     @IBOutlet weak var signupOutlet: UIButton!
+    @IBOutlet weak var formFeedbackLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButtonOutlet.backgroundColor = ColorScheme.valet_blue
         signupOutlet.tintColor = ColorScheme.valet_orange
+        formFeedbackLabel.alpha = 0
+        
         TokenKeychain.clearAccessToken()
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,17 +33,27 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: Any) {
-        if emailTextField.text != "" && passwordTextField.text != "" {
-            LoginService.login(email: emailTextField.text!, password: passwordTextField.text!)
-            if (KeychainWrapper.standard.string(forKey: TokenKeychain.accessTokenKey) != nil) {
-                self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
-            }
+        LoginService.login(email: emailTextField.text!, password: passwordTextField.text!)
+        if (KeychainWrapper.standard.string(forKey: TokenKeychain.accessTokenKey) != nil) {
+            self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
         }
+        updateFormFeedback()
        
     }
     
     @IBAction func signupButton(_ sender: Any) {
         
+    }
+    
+    func updateFormFeedback() {
+        switch LoginService.formError {
+        case LoginService.error.wrongPassword:
+            formFeedbackLabel.alpha = 1
+            formFeedbackLabel.text = "Wrong password"
+        default:
+            formFeedbackLabel.alpha = 1
+            formFeedbackLabel.text = "Please enter an email and password"
+        }
     }
     
 
