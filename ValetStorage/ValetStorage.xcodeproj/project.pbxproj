@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28A1810F225B0E8F0085B5C9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A1810E225B0E8F0085B5C9 /* Login.storyboard */; };
+		28A18119225B0F330085B5C9 /* TokenKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A18116225B0F330085B5C9 /* TokenKeychain.swift */; };
+		28A1811A225B0F330085B5C9 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A18117225B0F330085B5C9 /* LoginService.swift */; };
+		28A1811B225B0F330085B5C9 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A18118225B0F330085B5C9 /* ColorScheme.swift */; };
+		28A1811E225B0F4E0085B5C9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1811C225B0F4E0085B5C9 /* SignupViewController.swift */; };
+		28A1811F225B0F4E0085B5C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1811D225B0F4E0085B5C9 /* LoginViewController.swift */; };
 		28BE7CE722541D0900C4DCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7CE622541D0900C4DCE9 /* AppDelegate.swift */; };
 		28BE7CE922541D0900C4DCE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7CE822541D0900C4DCE9 /* ViewController.swift */; };
 		28BE7CEC22541D0900C4DCE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28BE7CEA22541D0900C4DCE9 /* Main.storyboard */; };
@@ -15,6 +21,13 @@
 		28BE7CF422541D0A00C4DCE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28BE7CF222541D0A00C4DCE9 /* LaunchScreen.storyboard */; };
 		28BE7CFF22541D0A00C4DCE9 /* ValetStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7CFE22541D0A00C4DCE9 /* ValetStorageTests.swift */; };
 		28BE7D0A22541D0A00C4DCE9 /* ValetStorageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7D0922541D0A00C4DCE9 /* ValetStorageUITests.swift */; };
+		32B8A5236EF2EC1E5ED10216 /* Pods_ValetStorageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50B55AEFDE90511A9F883FB /* Pods_ValetStorageTests.framework */; };
+		B844A2F3C0FF78CAF477DB78 /* Pods_ValetStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F15BB24F8D1229B8FDA52B /* Pods_ValetStorage.framework */; };
+		C4884EBF22551A9D0002D71D /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4884EBE22551A9D0002D71D /* OnBoarding.storyboard */; };
+		C4884EC42255283B0002D71D /* WalkThroughContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4884EC32255283B0002D71D /* WalkThroughContentController.swift */; };
+		C4884EC6225539B30002D71D /* WalkTroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4884EC5225539B30002D71D /* WalkTroughPageViewController.swift */; };
+		C4BD420E22599710005843F4 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD420D22599710005843F4 /* WalkThroughViewController.swift */; };
+		DCB1CAD23F7FB582A0B0AD4F /* Pods_ValetStorageUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269C9352895BDA3692ED42D6 /* Pods_ValetStorageUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +48,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		077CBA75F6D5602C29A4C003 /* Pods-ValetStorageUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorageUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorageUITests/Pods-ValetStorageUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1AFB00CEF8CFBA8E2BF62C1C /* Pods-ValetStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorage/Pods-ValetStorage.debug.xcconfig"; sourceTree = "<group>"; };
+		269C9352895BDA3692ED42D6 /* Pods_ValetStorageUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetStorageUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28A1810E225B0E8F0085B5C9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		28A18116225B0F330085B5C9 /* TokenKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenKeychain.swift; sourceTree = "<group>"; };
+		28A18117225B0F330085B5C9 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		28A18118225B0F330085B5C9 /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		28A1811C225B0F4E0085B5C9 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		28A1811D225B0F4E0085B5C9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		28BE7CE322541D0900C4DCE9 /* ValetStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValetStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BE7CE622541D0900C4DCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28BE7CE822541D0900C4DCE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +71,16 @@
 		28BE7D0522541D0A00C4DCE9 /* ValetStorageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValetStorageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BE7D0922541D0A00C4DCE9 /* ValetStorageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValetStorageUITests.swift; sourceTree = "<group>"; };
 		28BE7D0B22541D0A00C4DCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66F15BB24F8D1229B8FDA52B /* Pods_ValetStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50B55AEFDE90511A9F883FB /* Pods_ValetStorageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetStorageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B340AB26AE987ED4BE7D3F03 /* Pods-ValetStorageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorageTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorageTests/Pods-ValetStorageTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4884EBE22551A9D0002D71D /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		C4884EC32255283B0002D71D /* WalkThroughContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughContentController.swift; sourceTree = "<group>"; };
+		C4884EC5225539B30002D71D /* WalkTroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkTroughPageViewController.swift; sourceTree = "<group>"; };
+		C4BD420D22599710005843F4 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
+		CF00A8BBBFDA84E98BF31F77 /* Pods-ValetStorageUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorageUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorageUITests/Pods-ValetStorageUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D0234B6C97FC805F8628D241 /* Pods-ValetStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorage.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorage/Pods-ValetStorage.release.xcconfig"; sourceTree = "<group>"; };
+		DA5DACB4E3274473639CF454 /* Pods-ValetStorageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorageTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorageTests/Pods-ValetStorageTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B844A2F3C0FF78CAF477DB78 /* Pods_ValetStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32B8A5236EF2EC1E5ED10216 /* Pods_ValetStorageTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +104,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB1CAD23F7FB582A0B0AD4F /* Pods_ValetStorageUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28055B5A225A8360001104B4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				28A1810E225B0E8F0085B5C9 /* Login.storyboard */,
+				C4884EBE22551A9D0002D71D /* OnBoarding.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		28055B5D225A8391001104B4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				28A18118225B0F330085B5C9 /* ColorScheme.swift */,
+				28A18117225B0F330085B5C9 /* LoginService.swift */,
+				28A18116225B0F330085B5C9 /* TokenKeychain.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		28055B64225A83AF001104B4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				28A1811D225B0F4E0085B5C9 /* LoginViewController.swift */,
+				28A1811C225B0F4E0085B5C9 /* SignupViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		28BE7CDA22541D0900C4DCE9 = {
 			isa = PBXGroup;
 			children = (
+				28055B5D225A8391001104B4 /* Classes */,
+				28055B5A225A8360001104B4 /* Storyboards */,
+				C4884EC0225527CA0002D71D /* ViewController */,
 				28BE7CE522541D0900C4DCE9 /* ValetStorage */,
 				28BE7CFD22541D0A00C4DCE9 /* ValetStorageTests */,
 				28BE7D0822541D0A00C4DCE9 /* ValetStorageUITests */,
 				28BE7CE422541D0900C4DCE9 /* Products */,
+				512C2915808F9AFB783C3597 /* Pods */,
+				F4AFB6F7AC5EF4609E0572F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +196,40 @@
 			path = ValetStorageUITests;
 			sourceTree = "<group>";
 		};
+		512C2915808F9AFB783C3597 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1AFB00CEF8CFBA8E2BF62C1C /* Pods-ValetStorage.debug.xcconfig */,
+				D0234B6C97FC805F8628D241 /* Pods-ValetStorage.release.xcconfig */,
+				B340AB26AE987ED4BE7D3F03 /* Pods-ValetStorageTests.debug.xcconfig */,
+				DA5DACB4E3274473639CF454 /* Pods-ValetStorageTests.release.xcconfig */,
+				077CBA75F6D5602C29A4C003 /* Pods-ValetStorageUITests.debug.xcconfig */,
+				CF00A8BBBFDA84E98BF31F77 /* Pods-ValetStorageUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C4884EC0225527CA0002D71D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28055B64225A83AF001104B4 /* Login */,
+				C4884EC32255283B0002D71D /* WalkThroughContentController.swift */,
+				C4884EC5225539B30002D71D /* WalkTroughPageViewController.swift */,
+				C4BD420D22599710005843F4 /* WalkThroughViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F4AFB6F7AC5EF4609E0572F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66F15BB24F8D1229B8FDA52B /* Pods_ValetStorage.framework */,
+				A50B55AEFDE90511A9F883FB /* Pods_ValetStorageTests.framework */,
+				269C9352895BDA3692ED42D6 /* Pods_ValetStorageUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28BE7D0E22541D0A00C4DCE9 /* Build configuration list for PBXNativeTarget "ValetStorage" */;
 			buildPhases = (
+				0EA1D0F475AAA2A3B6B0449F /* [CP] Check Pods Manifest.lock */,
 				28BE7CDF22541D0900C4DCE9 /* Sources */,
 				28BE7CE022541D0900C4DCE9 /* Frameworks */,
 				28BE7CE122541D0900C4DCE9 /* Resources */,
+				263A85B20488F587AA1CCFDE /* [CP] Embed Pods Frameworks */,
+				F7071D02036E508245C9F953 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28BE7D1122541D0A00C4DCE9 /* Build configuration list for PBXNativeTarget "ValetStorageTests" */;
 			buildPhases = (
+				C834996C4E9D9A8A362D710E /* [CP] Check Pods Manifest.lock */,
 				28BE7CF622541D0A00C4DCE9 /* Sources */,
 				28BE7CF722541D0A00C4DCE9 /* Frameworks */,
 				28BE7CF822541D0A00C4DCE9 /* Resources */,
+				B8A191B579815657E0B81063 /* [CP] Embed Pods Frameworks */,
+				D434690A8A6035FBC1120E14 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +278,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28BE7D1422541D0A00C4DCE9 /* Build configuration list for PBXNativeTarget "ValetStorageUITests" */;
 			buildPhases = (
+				E16DB95014AFA724ED56A19E /* [CP] Check Pods Manifest.lock */,
 				28BE7D0122541D0A00C4DCE9 /* Sources */,
 				28BE7D0222541D0A00C4DCE9 /* Frameworks */,
 				28BE7D0322541D0A00C4DCE9 /* Resources */,
+				1FA4790798DF2A61DC0F1132 /* [CP] Embed Pods Frameworks */,
+				6BC6F8A86310490F20750B7B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +346,8 @@
 				28BE7CF422541D0A00C4DCE9 /* LaunchScreen.storyboard in Resources */,
 				28BE7CF122541D0A00C4DCE9 /* Assets.xcassets in Resources */,
 				28BE7CEC22541D0900C4DCE9 /* Main.storyboard in Resources */,
+				28A1810F225B0E8F0085B5C9 /* Login.storyboard in Resources */,
+				C4884EBF22551A9D0002D71D /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +367,174 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EA1D0F475AAA2A3B6B0449F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ValetStorage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FA4790798DF2A61DC0F1132 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValetStorageUITests/Pods-ValetStorageUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		263A85B20488F587AA1CCFDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ValetStorage/Pods-ValetStorage-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValetStorage/Pods-ValetStorage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BC6F8A86310490F20750B7B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValetStorageUITests/Pods-ValetStorageUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8A191B579815657E0B81063 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValetStorageTests/Pods-ValetStorageTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C834996C4E9D9A8A362D710E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ValetStorageTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D434690A8A6035FBC1120E14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValetStorageTests/Pods-ValetStorageTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E16DB95014AFA724ED56A19E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ValetStorageUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7071D02036E508245C9F953 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValetStorage/Pods-ValetStorage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28BE7CDF22541D0900C4DCE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4884EC42255283B0002D71D /* WalkThroughContentController.swift in Sources */,
+				28A18119225B0F330085B5C9 /* TokenKeychain.swift in Sources */,
+				28A1811E225B0F4E0085B5C9 /* SignupViewController.swift in Sources */,
 				28BE7CEF22541D0900C4DCE9 /* ValetStorage.xcdatamodeld in Sources */,
 				28BE7CE922541D0900C4DCE9 /* ViewController.swift in Sources */,
+				C4BD420E22599710005843F4 /* WalkThroughViewController.swift in Sources */,
+				28A1811B225B0F330085B5C9 /* ColorScheme.swift in Sources */,
 				28BE7CE722541D0900C4DCE9 /* AppDelegate.swift in Sources */,
+				28A1811A225B0F330085B5C9 /* LoginService.swift in Sources */,
+				C4884EC6225539B30002D71D /* WalkTroughPageViewController.swift in Sources */,
+				28A1811F225B0F4E0085B5C9 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,14 +705,12 @@
 		};
 		28BE7D0F22541D0A00C4DCE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AFB00CEF8CFBA8E2BF62C1C /* Pods-ValetStorage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValetStorage/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VuongHenry.ValetStorage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -449,14 +720,12 @@
 		};
 		28BE7D1022541D0A00C4DCE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0234B6C97FC805F8628D241 /* Pods-ValetStorage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValetStorage/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VuongHenry.ValetStorage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -466,16 +735,13 @@
 		};
 		28BE7D1222541D0A00C4DCE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B340AB26AE987ED4BE7D3F03 /* Pods-ValetStorageTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValetStorageTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VuongHenry.ValetStorageTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -486,16 +752,13 @@
 		};
 		28BE7D1322541D0A00C4DCE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA5DACB4E3274473639CF454 /* Pods-ValetStorageTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValetStorageTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VuongHenry.ValetStorageTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -506,15 +769,12 @@
 		};
 		28BE7D1522541D0A00C4DCE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 077CBA75F6D5602C29A4C003 /* Pods-ValetStorageUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValetStorageUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VuongHenry.ValetStorageUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -525,15 +785,12 @@
 		};
 		28BE7D1622541D0A00C4DCE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF00A8BBBFDA84E98BF31F77 /* Pods-ValetStorageUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValetStorageUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VuongHenry.ValetStorageUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
