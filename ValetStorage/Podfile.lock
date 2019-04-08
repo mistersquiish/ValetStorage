@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.6.0)
+  - AnimatedTextInput (0.3.3)
   - SwiftKeychainWrapper (3.0.1)
 
 DEPENDENCIES:
   - Alamofire
+  - AnimatedTextInput (~> 0.3.0)
   - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AnimatedTextInput: ca74e724c6b6c9d0566bdb0cffa38e476776c70c
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: ab896c60917f0824c8cc06c575822f73c7f00b1e
+PODFILE CHECKSUM: 171dee6b45fe3729a0013bd88c7cd162d2543583
 
 COCOAPODS: 1.4.0
