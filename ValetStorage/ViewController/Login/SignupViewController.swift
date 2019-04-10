@@ -17,14 +17,41 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var signupButtonOutlet: UIButton!
     @IBOutlet weak var formFeedbackLabel: UILabel!
-    
-    
+    @IBOutlet weak var signinButtonOutlet: UIButton!
+    // Contraints for animations
+    @IBOutlet weak var TopConstraintLogo: NSLayoutConstraint!
+    @IBOutlet weak var BottomConstraintLogo: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // UI settings
         signupButtonOutlet.backgroundColor = ColorScheme.valet_blue
         formFeedbackLabel.alpha = 0
+        signinButtonOutlet.tintColor = ColorScheme.valet_orange
+        emailTextField.layer.masksToBounds = false
+        emailTextField.layer.borderWidth = 0.5
+        emailTextField.layer.cornerRadius = 12
+        emailTextField.clipsToBounds = true
+        passwordTextField.layer.masksToBounds = false
+        passwordTextField.layer.borderWidth = 0.5
+        passwordTextField.layer.cornerRadius = 12
+        passwordTextField.clipsToBounds = true
+        nameTextField.layer.masksToBounds = false
+        nameTextField.layer.borderWidth = 0.5
+        nameTextField.layer.cornerRadius = 12
+        nameTextField.clipsToBounds = true
+        signupButtonOutlet.layer.masksToBounds = false
+        signupButtonOutlet.layer.borderWidth = 0.5
+        signupButtonOutlet.layer.cornerRadius = 12
+        signupButtonOutlet.clipsToBounds = true
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        // dismiss keyboard if view is tapped
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +68,10 @@ class SignupViewController: UIViewController {
         
         updateFormFeedback()
     }
+    
+    @IBAction func signinButton(_ sender: Any) {
+    }
+    
     
     func updateFormFeedback() {
         switch LoginService.formError {
@@ -60,6 +91,23 @@ class SignupViewController: UIViewController {
             formFeedbackLabel.alpha = 1
             formFeedbackLabel.text = "Please enter your name, email, password"
         }
+    }
+    
+    // methods for keyboard
+    @objc func keyboardWillShow(notification: NSNotification) {
+        self.TopConstraintLogo.constant = 15
+        self.BottomConstraintLogo.constant = 15
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 3, options: .curveEaseInOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+    }
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.TopConstraintLogo.constant = 60
+        self.BottomConstraintLogo.constant = 30
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 3, options: .curveEaseInOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
     }
     
 }
