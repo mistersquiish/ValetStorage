@@ -25,7 +25,7 @@
 		28BE7D0A22541D0A00C4DCE9 /* ValetStorageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7D0922541D0A00C4DCE9 /* ValetStorageUITests.swift */; };
 		32B8A5236EF2EC1E5ED10216 /* Pods_ValetStorageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50B55AEFDE90511A9F883FB /* Pods_ValetStorageTests.framework */; };
 		B844A2F3C0FF78CAF477DB78 /* Pods_ValetStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F15BB24F8D1229B8FDA52B /* Pods_ValetStorage.framework */; };
-		C472970A225E434D000461B3 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4729709225E434D000461B3 /* Onboarding.storyboard */; };
+		C4267C78225E4FF000F828DC /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4267C77225E4FF000F828DC /* Onboarding.storyboard */; };
 		C4884EC42255283B0002D71D /* WalkThroughContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4884EC32255283B0002D71D /* WalkThroughContentController.swift */; };
 		C4884EC6225539B30002D71D /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4884EC5225539B30002D71D /* WalkthroughPageViewController.swift */; };
 		C4BD420E22599710005843F4 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD420D22599710005843F4 /* WalkThroughViewController.swift */; };
@@ -78,7 +78,7 @@
 		66F15BB24F8D1229B8FDA52B /* Pods_ValetStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50B55AEFDE90511A9F883FB /* Pods_ValetStorageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetStorageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B340AB26AE987ED4BE7D3F03 /* Pods-ValetStorageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorageTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorageTests/Pods-ValetStorageTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C4729709225E434D000461B3 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Onboarding.storyboard; path = ../../../../Downloads/Cafegram2EN/Cafegram2EN/Storyboard/Onboarding.storyboard; sourceTree = "<group>"; };
+		C4267C77225E4FF000F828DC /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		C4884EC32255283B0002D71D /* WalkThroughContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughContentController.swift; sourceTree = "<group>"; };
 		C4884EC5225539B30002D71D /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		C4BD420D22599710005843F4 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		28055B5A225A8360001104B4 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				C4729709225E434D000461B3 /* Onboarding.storyboard */,
+				C4267C77225E4FF000F828DC /* Onboarding.storyboard */,
 				28A1810E225B0E8F0085B5C9 /* Login.storyboard */,
 				2832F246225D9CCA00814669 /* PurchasingOptions.storyboard */,
 			);
@@ -368,7 +368,7 @@
 				28BE7CF422541D0A00C4DCE9 /* LaunchScreen.storyboard in Resources */,
 				28BE7CF122541D0A00C4DCE9 /* Assets.xcassets in Resources */,
 				28BE7CEC22541D0900C4DCE9 /* Main.storyboard in Resources */,
-				C472970A225E434D000461B3 /* Onboarding.storyboard in Resources */,
+				C4267C78225E4FF000F828DC /* Onboarding.storyboard in Resources */,
 				2832F247225D9CCA00814669 /* PurchasingOptions.storyboard in Resources */,
 				28A1810F225B0E8F0085B5C9 /* Login.storyboard in Resources */,
 			);
