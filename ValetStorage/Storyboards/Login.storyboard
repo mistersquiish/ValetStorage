@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="-92" y="97.601199400299862"/>
         </scene>
-        <!--HomeView-->
+        <!--OptionsView-->
         <scene sceneID="NMu-XR-vUV">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="HomeView" id="lSF-Yd-t3D" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PurchasingOptions" referencedIdentifier="OptionsView" id="lSF-Yd-t3D" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAg-O5-nAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1145" y="-78"/>
@@ -246,7 +246,7 @@
         <image name="LogoName" width="3992" height="1165"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Noy-q3-EOw"/>
-        <segue reference="1Fd-Os-H9f"/>
+        <segue reference="PXq-ix-MkA"/>
+        <segue reference="SVs-dK-xZd"/>
     </inferredMetricsTieBreakers>
 </document>

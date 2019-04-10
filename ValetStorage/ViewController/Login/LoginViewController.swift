@@ -49,8 +49,6 @@ class LoginViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
-        
-        TokenKeychain.clearAccessToken()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,11 +57,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: Any) {
-        LoginService.login(email: emailTextField.text!, password: passwordTextField.text!)
-        if (KeychainWrapper.standard.string(forKey: TokenKeychain.accessTokenKey) != nil) {
-            self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
-        }
-        updateFormFeedback()
+        LoginService.login(email: emailTextField.text!, password: passwordTextField.text!, completion: { () -> () in
+            if TokenKeychain.hasToken() {
+                self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
+            }
+            self.updateFormFeedback()
+        })
        
     }
     

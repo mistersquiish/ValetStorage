@@ -61,12 +61,12 @@ class SignupViewController: UIViewController {
 
     @IBAction func signupButton(_ sender: Any) {
         
-        LoginService.signup(email: emailTextField.text!, password: passwordTextField.text!, full_name: nameTextField.text!)
-        if (KeychainWrapper.standard.string(forKey: TokenKeychain.accessTokenKey) != nil) {
-            self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
-        }
-        
-        updateFormFeedback()
+        LoginService.signup(email: emailTextField.text!, password: passwordTextField.text!, full_name: nameTextField.text!, completion: { () -> () in
+            if TokenKeychain.hasToken() {
+                self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
+            }
+            self.updateFormFeedback()
+        })
     }
     
     @IBAction func signinButton(_ sender: Any) {

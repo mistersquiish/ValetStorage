@@ -21,4 +21,8 @@ class TokenKeychain {
     static func clearAccessToken() {
         KeychainWrapper.standard.removeObject(forKey: accessTokenKey)
     }
+    
+    static func hasToken() -> Bool {
+        return KeychainWrapper.standard.string(forKey: TokenKeychain.accessTokenKey) != nil ? true : false
+    }
 }

@@ -46,10 +46,11 @@ class LoginService{
     /**
      Calls the Login Web Service to authenticate the user
      */
-    public static func login(email:String, password: String){
+    public static func login(email:String, password: String, completion: @escaping () -> Void){
         
         if email == "" || password == "" {
             self.formError = error.incompleteForm
+            completion()
         } else {
             // Handle Authentication challenge
             
@@ -86,20 +87,25 @@ class LoginService{
                 } else {
                     self.formError = error.wrongPassword
                 }
+                completion()
             }
         }
         
     }
-    public static func signup(email:String, password: String, full_name: String) {
+    public static func signup(email:String, password: String, full_name: String, completion: @escaping () -> Void) {
         
         if email == "" || password == "" || full_name == "" {
             self.formError = error.incompleteForm
+            completion()
         } else if !full_name.contains(" ") {
             self.formError = error.enterFullName
+            completion()
         } else if !isValidEmail(testStr: email) {
             self.formError = error.invalidEmail
+            completion()
         } else if password.count < 8 {
             self.formError = error.shortPassword
+            completion()
         } else {
             // Handle Authentication challenge
             
@@ -137,6 +143,7 @@ class LoginService{
                 } else {
                     self.formError = error.emailInUse
                 }
+                completion()
             }
         }
     }
