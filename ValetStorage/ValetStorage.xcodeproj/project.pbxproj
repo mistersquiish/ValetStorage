@@ -23,10 +23,10 @@
 		28BE7D0A22541D0A00C4DCE9 /* ValetStorageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7D0922541D0A00C4DCE9 /* ValetStorageUITests.swift */; };
 		32B8A5236EF2EC1E5ED10216 /* Pods_ValetStorageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50B55AEFDE90511A9F883FB /* Pods_ValetStorageTests.framework */; };
 		B844A2F3C0FF78CAF477DB78 /* Pods_ValetStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F15BB24F8D1229B8FDA52B /* Pods_ValetStorage.framework */; };
+		C41E8793225DA84900D04F6E /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E8790225DA84900D04F6E /* WalkthroughPageViewController.swift */; };
+		C41E8794225DA84900D04F6E /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E8791225DA84900D04F6E /* WalkthroughContentViewController.swift */; };
+		C41E8795225DA84900D04F6E /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E8792225DA84900D04F6E /* WalkthroughViewController.swift */; };
 		C4884EBF22551A9D0002D71D /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4884EBE22551A9D0002D71D /* OnBoarding.storyboard */; };
-		C4884EC42255283B0002D71D /* WalkThroughContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4884EC32255283B0002D71D /* WalkThroughContentController.swift */; };
-		C4884EC6225539B30002D71D /* WalkTroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4884EC5225539B30002D71D /* WalkTroughPageViewController.swift */; };
-		C4BD420E22599710005843F4 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD420D22599710005843F4 /* WalkThroughViewController.swift */; };
 		DCB1CAD23F7FB582A0B0AD4F /* Pods_ValetStorageUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269C9352895BDA3692ED42D6 /* Pods_ValetStorageUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,10 +74,10 @@
 		66F15BB24F8D1229B8FDA52B /* Pods_ValetStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50B55AEFDE90511A9F883FB /* Pods_ValetStorageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetStorageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B340AB26AE987ED4BE7D3F03 /* Pods-ValetStorageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorageTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorageTests/Pods-ValetStorageTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C41E8790225DA84900D04F6E /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkthroughPageViewController.swift; path = ../../../../WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		C41E8791225DA84900D04F6E /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkthroughContentViewController.swift; path = ../../../../WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		C41E8792225DA84900D04F6E /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkthroughViewController.swift; path = ../../../../WalkthroughViewController.swift; sourceTree = "<group>"; };
 		C4884EBE22551A9D0002D71D /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
-		C4884EC32255283B0002D71D /* WalkThroughContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughContentController.swift; sourceTree = "<group>"; };
-		C4884EC5225539B30002D71D /* WalkTroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkTroughPageViewController.swift; sourceTree = "<group>"; };
-		C4BD420D22599710005843F4 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		CF00A8BBBFDA84E98BF31F77 /* Pods-ValetStorageUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorageUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorageUITests/Pods-ValetStorageUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D0234B6C97FC805F8628D241 /* Pods-ValetStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorage.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorage/Pods-ValetStorage.release.xcconfig"; sourceTree = "<group>"; };
 		DA5DACB4E3274473639CF454 /* Pods-ValetStorageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorageTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorageTests/Pods-ValetStorageTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -209,13 +209,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C41E878F225DA7FE00D04F6E /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				C41E8791225DA84900D04F6E /* WalkthroughContentViewController.swift */,
+				C41E8790225DA84900D04F6E /* WalkthroughPageViewController.swift */,
+				C41E8792225DA84900D04F6E /* WalkthroughViewController.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
 		C4884EC0225527CA0002D71D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C41E878F225DA7FE00D04F6E /* OnBoarding */,
 				28055B64225A83AF001104B4 /* Login */,
-				C4884EC32255283B0002D71D /* WalkThroughContentController.swift */,
-				C4884EC5225539B30002D71D /* WalkTroughPageViewController.swift */,
-				C4BD420D22599710005843F4 /* WalkThroughViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -524,17 +532,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4884EC42255283B0002D71D /* WalkThroughContentController.swift in Sources */,
 				28A18119225B0F330085B5C9 /* TokenKeychain.swift in Sources */,
 				28A1811E225B0F4E0085B5C9 /* SignupViewController.swift in Sources */,
 				28BE7CEF22541D0900C4DCE9 /* ValetStorage.xcdatamodeld in Sources */,
+				C41E8794225DA84900D04F6E /* WalkthroughContentViewController.swift in Sources */,
+				C41E8793225DA84900D04F6E /* WalkthroughPageViewController.swift in Sources */,
 				28BE7CE922541D0900C4DCE9 /* ViewController.swift in Sources */,
-				C4BD420E22599710005843F4 /* WalkThroughViewController.swift in Sources */,
 				28A1811B225B0F330085B5C9 /* ColorScheme.swift in Sources */,
 				28BE7CE722541D0900C4DCE9 /* AppDelegate.swift in Sources */,
 				28A1811A225B0F330085B5C9 /* LoginService.swift in Sources */,
-				C4884EC6225539B30002D71D /* WalkTroughPageViewController.swift in Sources */,
 				28A1811F225B0F4E0085B5C9 /* LoginViewController.swift in Sources */,
+				C41E8795225DA84900D04F6E /* WalkthroughViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,7 +718,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValetStorage/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = VuongHenry.ValetStorage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -725,7 +736,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValetStorage/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = VuongHenry.ValetStorage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -741,7 +755,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValetStorageTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = VuongHenry.ValetStorageTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -758,7 +776,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValetStorageTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = VuongHenry.ValetStorageTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -774,7 +796,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValetStorageUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = VuongHenry.ValetStorageUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -790,7 +816,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValetStorageUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = VuongHenry.ValetStorageUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
