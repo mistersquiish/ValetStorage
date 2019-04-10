@@ -30,8 +30,7 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
     // MARK: - Actions
     
     @IBAction func skipButtonTapped(sender: UIButton) {
-        UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
-        dismiss(animated: true, completion: nil)
+        navigateToLogin()
     }
     
     @IBAction func nextButtonTapped(sender: UIButton) {
@@ -41,8 +40,7 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
                 walkthroughPageViewController?.forwardPage()
                 
             case 2:
-                UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
-                dismiss(animated: true, completion: nil)
+                navigateToLogin()
                 
             default: break
             }
@@ -94,6 +92,11 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
         }
     }
     
+    func navigateToLogin() {
+        TokenKeychain.clearAccessToken()
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginView") as! LoginViewController
+        self.present(vc, animated: true, completion: nil)
+    }
     
 }
 

@@ -22,6 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = optionsViewControllers
         }
         
+        if !UserDefaults.standard.bool(forKey: "didSee") {
+            UserDefaults.standard.set(true, forKey: "didSee")
+            
+            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController")
+            self.window?.rootViewController = viewController
+            self.window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 
