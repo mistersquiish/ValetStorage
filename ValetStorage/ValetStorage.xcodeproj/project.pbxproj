@@ -25,9 +25,9 @@
 		28BE7D0A22541D0A00C4DCE9 /* ValetStorageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7D0922541D0A00C4DCE9 /* ValetStorageUITests.swift */; };
 		32B8A5236EF2EC1E5ED10216 /* Pods_ValetStorageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50B55AEFDE90511A9F883FB /* Pods_ValetStorageTests.framework */; };
 		B844A2F3C0FF78CAF477DB78 /* Pods_ValetStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F15BB24F8D1229B8FDA52B /* Pods_ValetStorage.framework */; };
-		C4884EBF22551A9D0002D71D /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4884EBE22551A9D0002D71D /* OnBoarding.storyboard */; };
+		C472970A225E434D000461B3 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4729709225E434D000461B3 /* Onboarding.storyboard */; };
 		C4884EC42255283B0002D71D /* WalkThroughContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4884EC32255283B0002D71D /* WalkThroughContentController.swift */; };
-		C4884EC6225539B30002D71D /* WalkTroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4884EC5225539B30002D71D /* WalkTroughPageViewController.swift */; };
+		C4884EC6225539B30002D71D /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4884EC5225539B30002D71D /* WalkthroughPageViewController.swift */; };
 		C4BD420E22599710005843F4 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD420D22599710005843F4 /* WalkThroughViewController.swift */; };
 		DCB1CAD23F7FB582A0B0AD4F /* Pods_ValetStorageUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269C9352895BDA3692ED42D6 /* Pods_ValetStorageUITests.framework */; };
 /* End PBXBuildFile section */
@@ -78,9 +78,9 @@
 		66F15BB24F8D1229B8FDA52B /* Pods_ValetStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50B55AEFDE90511A9F883FB /* Pods_ValetStorageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetStorageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B340AB26AE987ED4BE7D3F03 /* Pods-ValetStorageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorageTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorageTests/Pods-ValetStorageTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C4884EBE22551A9D0002D71D /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		C4729709225E434D000461B3 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Onboarding.storyboard; path = ../../../../Downloads/Cafegram2EN/Cafegram2EN/Storyboard/Onboarding.storyboard; sourceTree = "<group>"; };
 		C4884EC32255283B0002D71D /* WalkThroughContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughContentController.swift; sourceTree = "<group>"; };
-		C4884EC5225539B30002D71D /* WalkTroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkTroughPageViewController.swift; sourceTree = "<group>"; };
+		C4884EC5225539B30002D71D /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		C4BD420D22599710005843F4 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		CF00A8BBBFDA84E98BF31F77 /* Pods-ValetStorageUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorageUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorageUITests/Pods-ValetStorageUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D0234B6C97FC805F8628D241 /* Pods-ValetStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetStorage.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValetStorage/Pods-ValetStorage.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,8 +118,8 @@
 		28055B5A225A8360001104B4 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				C4729709225E434D000461B3 /* Onboarding.storyboard */,
 				28A1810E225B0E8F0085B5C9 /* Login.storyboard */,
-				C4884EBE22551A9D0002D71D /* OnBoarding.storyboard */,
 				2832F246225D9CCA00814669 /* PurchasingOptions.storyboard */,
 			);
 			path = Storyboards;
@@ -222,14 +222,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C4729708225E4232000461B3 /* WalkThrough */ = {
+			isa = PBXGroup;
+			children = (
+				C4884EC32255283B0002D71D /* WalkThroughContentController.swift */,
+				C4884EC5225539B30002D71D /* WalkthroughPageViewController.swift */,
+				C4BD420D22599710005843F4 /* WalkThroughViewController.swift */,
+			);
+			path = WalkThrough;
+			sourceTree = "<group>";
+		};
 		C4884EC0225527CA0002D71D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C4729708225E4232000461B3 /* WalkThrough */,
 				2832F248225D9D4900814669 /* Checkout */,
 				28055B64225A83AF001104B4 /* Login */,
-				C4884EC32255283B0002D71D /* WalkThroughContentController.swift */,
-				C4884EC5225539B30002D71D /* WalkTroughPageViewController.swift */,
-				C4BD420D22599710005843F4 /* WalkThroughViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -360,9 +368,9 @@
 				28BE7CF422541D0A00C4DCE9 /* LaunchScreen.storyboard in Resources */,
 				28BE7CF122541D0A00C4DCE9 /* Assets.xcassets in Resources */,
 				28BE7CEC22541D0900C4DCE9 /* Main.storyboard in Resources */,
+				C472970A225E434D000461B3 /* Onboarding.storyboard in Resources */,
 				2832F247225D9CCA00814669 /* PurchasingOptions.storyboard in Resources */,
 				28A1810F225B0E8F0085B5C9 /* Login.storyboard in Resources */,
-				C4884EBF22551A9D0002D71D /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +557,7 @@
 				28BE7CE722541D0900C4DCE9 /* AppDelegate.swift in Sources */,
 				2832F24A225D9D5F00814669 /* OptionsTableViewController.swift in Sources */,
 				28A1811A225B0F330085B5C9 /* LoginService.swift in Sources */,
-				C4884EC6225539B30002D71D /* WalkTroughPageViewController.swift in Sources */,
+				C4884EC6225539B30002D71D /* WalkthroughPageViewController.swift in Sources */,
 				28A1811F225B0F4E0085B5C9 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
