@@ -20,6 +20,7 @@ class LoginService{
         case shortPassword
         case invalidEmail
         case enterFullName
+        case connectionError
     }
     static var formError: error = error.incompleteForm
     private static var Manager: Alamofire.SessionManager = {
@@ -27,7 +28,8 @@ class LoginService{
         // Create the server trust policies
         let serverTrustPolicies: [String: ServerTrustPolicy] = [
             
-            "stage.valet.storage": .disableEvaluation
+            "stage.valet.storage": .disableEvaluation,
+            "apistaging.valet.storage": .disableEvaluation
         ]
         
         // Create custom manager
@@ -139,9 +141,14 @@ class LoginService{
             LoginService.Manager.request("https://apistaging.valet.storage/signup", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
                 if response.result.isSuccess {
                     let data = response.result.value as? [String: Any]
-                    TokenKeychain.updateAccessToken(accessToken: data!["token"] as! String)
+                    if (data!["error"] as? String) != nil {
+                        self.formError = error.emailInUse
+                    } else {
+                        TokenKeychain.updateAccessToken(accessToken: data!["token"] as! String)
+                    }
+                
                 } else {
-                    self.formError = error.emailInUse
+                    self.formError = error.connectionError
                 }
                 completion()
             }

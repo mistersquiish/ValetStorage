@@ -246,7 +246,6 @@
         <image name="LogoName" width="3992" height="1165"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PXq-ix-MkA"/>
         <segue reference="SVs-dK-xZd"/>
     </inferredMetricsTieBreakers>
 </document>

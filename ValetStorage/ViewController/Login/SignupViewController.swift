@@ -9,7 +9,7 @@
 import UIKit
 import SwiftKeychainWrapper
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -52,6 +52,10 @@ class SignupViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
+        
+        // UITextFieldDelegate to dismiss keyboard on return
+        passwordTextField.delegate = self
+        passwordTextField.returnKeyType = .done
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,6 +91,9 @@ class SignupViewController: UIViewController {
         case LoginService.error.shortPassword:
             formFeedbackLabel.alpha = 1
             formFeedbackLabel.text = "Password must be at least 8 characters"
+        case LoginService.error.connectionError:
+            formFeedbackLabel.alpha = 1
+            formFeedbackLabel.text = "Connection Error, try again later"
         default:
             formFeedbackLabel.alpha = 1
             formFeedbackLabel.text = "Please enter your name, email, password"
@@ -108,6 +115,12 @@ class SignupViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 3, options: .curveEaseInOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
+    }
+    
+    // dismiss keyboard when return is hit
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+        passwordTextField.resignFirstResponder()
+        return true
     }
     
 }

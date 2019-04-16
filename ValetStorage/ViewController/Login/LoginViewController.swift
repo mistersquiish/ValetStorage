@@ -9,7 +9,7 @@
 import UIKit
 import SwiftKeychainWrapper
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate  {
 
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
@@ -49,6 +49,10 @@ class LoginViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
+        
+        // UITextFieldDelegate to dismiss keyboard on return
+        passwordTextField.delegate = self
+        passwordTextField.returnKeyType = .done
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,6 +100,12 @@ class LoginViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 3, options: .curveEaseInOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
+    }
+    
+    // dismiss keyboard when return is hit
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+        passwordTextField.resignFirstResponder()
+        return true
     }
 
 }

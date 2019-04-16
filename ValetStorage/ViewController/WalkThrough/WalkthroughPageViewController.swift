@@ -19,7 +19,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
     weak var walkthroughDelegate: WalkthroughPageViewControllerDelegate?
     
     var pageHeadings = ["You pack, we pick up!", "Save time. We do the hard work.", "Get your stuff delivered on-demand."]
-    var pageImages = ["Valet Storage- 04 Items Into Bin", "Valet Storage- 09 Back of truck at an angle", "Valet Storage- 14 Management of Bins"]
+    var pageImages = ["OnBoarding-1", "OnBoarding-2", "OnBoarding-3"]
     var pageSubHeadings = ["Sign up for the space you need. Pack and stage your stuff, and let us know when it’s ready!", "Our friendly storage experts will take care of everything.(At no extra cost!)", "Request your water skis in May, and your holiday bins in November.Manage all your stuff from any device."]
     
     var currentIndex = 0
