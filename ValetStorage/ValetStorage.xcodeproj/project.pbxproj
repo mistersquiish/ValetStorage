@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2832F247225D9CCA00814669 /* PurchasingOptions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2832F246225D9CCA00814669 /* PurchasingOptions.storyboard */; };
 		2832F24A225D9D5F00814669 /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2832F249225D9D5F00814669 /* OptionsTableViewController.swift */; };
+		28867C51226E5ED1005D6742 /* OptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28867C50226E5ED1005D6742 /* OptionsTableViewCell.swift */; };
 		28A1810F225B0E8F0085B5C9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A1810E225B0E8F0085B5C9 /* Login.storyboard */; };
 		28A18119225B0F330085B5C9 /* TokenKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A18116225B0F330085B5C9 /* TokenKeychain.swift */; };
 		28A1811A225B0F330085B5C9 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A18117225B0F330085B5C9 /* LoginService.swift */; };
@@ -16,7 +17,6 @@
 		28A1811E225B0F4E0085B5C9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1811C225B0F4E0085B5C9 /* SignupViewController.swift */; };
 		28A1811F225B0F4E0085B5C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1811D225B0F4E0085B5C9 /* LoginViewController.swift */; };
 		28BE7CE722541D0900C4DCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7CE622541D0900C4DCE9 /* AppDelegate.swift */; };
-		28BE7CE922541D0900C4DCE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7CE822541D0900C4DCE9 /* ViewController.swift */; };
 		28BE7CEF22541D0900C4DCE9 /* ValetStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7CED22541D0900C4DCE9 /* ValetStorage.xcdatamodeld */; };
 		28BE7CF122541D0A00C4DCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28BE7CF022541D0A00C4DCE9 /* Assets.xcassets */; };
 		28BE7CF422541D0A00C4DCE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28BE7CF222541D0A00C4DCE9 /* LaunchScreen.storyboard */; };
@@ -54,6 +54,7 @@
 		269C9352895BDA3692ED42D6 /* Pods_ValetStorageUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetStorageUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2832F246225D9CCA00814669 /* PurchasingOptions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PurchasingOptions.storyboard; sourceTree = "<group>"; };
 		2832F249225D9D5F00814669 /* OptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
+		28867C50226E5ED1005D6742 /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
 		28A1810E225B0E8F0085B5C9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		28A18116225B0F330085B5C9 /* TokenKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenKeychain.swift; sourceTree = "<group>"; };
 		28A18117225B0F330085B5C9 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		28A1811D225B0F4E0085B5C9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		28BE7CE322541D0900C4DCE9 /* ValetStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValetStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BE7CE622541D0900C4DCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28BE7CE822541D0900C4DCE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28BE7CEE22541D0900C4DCE9 /* ValetStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ValetStorage.xcdatamodel; sourceTree = "<group>"; };
 		28BE7CF022541D0A00C4DCE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28BE7CF322541D0A00C4DCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -150,9 +150,18 @@
 			path = Checkout;
 			sourceTree = "<group>";
 		};
+		28867C4F226E5EA6005D6742 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				28867C50226E5ED1005D6742 /* OptionsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		28BE7CDA22541D0900C4DCE9 = {
 			isa = PBXGroup;
 			children = (
+				28867C4F226E5EA6005D6742 /* Views */,
 				28055B5D225A8391001104B4 /* Classes */,
 				28055B5A225A8360001104B4 /* Storyboards */,
 				C4884EC0225527CA0002D71D /* ViewController */,
@@ -179,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				28BE7CE622541D0900C4DCE9 /* AppDelegate.swift */,
-				28BE7CE822541D0900C4DCE9 /* ViewController.swift */,
 				28BE7CF022541D0A00C4DCE9 /* Assets.xcassets */,
 				28BE7CF222541D0A00C4DCE9 /* LaunchScreen.storyboard */,
 				28BE7CF522541D0A00C4DCE9 /* Info.plist */,
@@ -543,11 +551,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28867C51226E5ED1005D6742 /* OptionsTableViewCell.swift in Sources */,
 				C4884EC42255283B0002D71D /* WalkThroughContentController.swift in Sources */,
 				28A18119225B0F330085B5C9 /* TokenKeychain.swift in Sources */,
 				28A1811E225B0F4E0085B5C9 /* SignupViewController.swift in Sources */,
 				28BE7CEF22541D0900C4DCE9 /* ValetStorage.xcdatamodeld in Sources */,
-				28BE7CE922541D0900C4DCE9 /* ViewController.swift in Sources */,
 				C4BD420E22599710005843F4 /* WalkThroughViewController.swift in Sources */,
 				28A1811B225B0F330085B5C9 /* ColorScheme.swift in Sources */,
 				28BE7CE722541D0900C4DCE9 /* AppDelegate.swift in Sources */,

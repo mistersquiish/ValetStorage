@@ -9,6 +9,9 @@
 import UIKit
 
 class OptionsTableViewController: UITableViewController {
+    
+    var valetStorageOptions = ["Bins", "5x5", "5x10", "10x10", "7.5x10", "10x15"]
+    var valetStorageOptionImages = ["Options-1", "Options-2", "Options-3", "Options-4", "Options-5", "Options-6"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +28,12 @@ class OptionsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return valetStorageOptions.count
     }
 
     @objc func signOut(_ sender: UIBarButtonItem) {
@@ -40,15 +43,12 @@ class OptionsTableViewController: UITableViewController {
     }
     
     
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OptionsCell", for: indexPath) as! OptionsTableViewCell
+        cell.optionsNameLabel.text = valetStorageOptions[indexPath.row]
+        cell.optionImage.image = UIImage(named: valetStorageOptionImages[indexPath.row])
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
