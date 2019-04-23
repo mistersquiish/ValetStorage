@@ -61,12 +61,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
     }
     
     @IBAction func loginButton(_ sender: Any) {
-        LoginService.login(email: emailTextField.text!, password: passwordTextField.text!, completion: { () -> () in
-            if TokenKeychain.hasToken() {
-                self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
-            }
-            self.updateFormFeedback()
-        })
+        self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
+        // uncomment when database is fixed
+//        LoginService.login(email: emailTextField.text!, password: passwordTextField.text!, completion: { () -> () in
+//            if TokenKeychain.hasToken() {
+//                self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
+//            }
+//            self.updateFormFeedback()
+//        })
        
     }
     
