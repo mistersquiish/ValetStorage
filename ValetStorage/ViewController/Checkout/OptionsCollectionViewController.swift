@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OptionsCollectionViewController: UICollectionViewController {
+class OptionsCollectionViewController: UICollectionViewController, UIGestureRecognizerDelegate {
     
     var valetStorageOptions = ["Bins", "5' X 5' Unit", "5' X 10' Unit", "10' X 10' Unit", "7.5' X 10' Unit", "10' X 15' Unit"]
     
@@ -19,13 +19,16 @@ class OptionsCollectionViewController: UICollectionViewController {
     var valetStoragePrice = ["$6/month", "$66/month", "$85/month", "$123/month", "$184/month", "$260/month"]
     var valetStorageSpace = ["Bins are 17″ x 27″ x 12″", "130 cubic feet of usable space.", "260 cubic feet of usable space.", "390 cubic feet of usable space.", "520 cubic feet of usable space.", "780 cubic feet of usable space."]
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign out", style: .plain, target: self, action: #selector(signOut))
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        let pressGesture = UILongPressGestureRecognizer(target: self, action: #selector(holdCell(recognizer:)))
+        pressGesture.minimumPressDuration = 1
+        collectionView?.addGestureRecognizer(pressGesture)
+        pressGesture.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,6 +83,17 @@ class OptionsCollectionViewController: UICollectionViewController {
                 let option = valetStorageOptions[indexPath.row]
                 let pricingViewController = segue.destination as! PricingViewController
                 pricingViewController.option = option
+            }
+        }
+    }
+    
+    @objc func holdCell(recognizer: UILongPressGestureRecognizer) {
+        if recognizer.state == UIGestureRecognizerState.began {
+            let pressedLocation = recognizer.location(in: self.collectionView)
+            if let pressedIndexPath = self.collectionView?.indexPathForItem(at: pressedLocation) {
+                if let pressedCell = self.collectionView?.cellForItem(at: pressedIndexPath) as? OptionsCollectionCell {
+                    // do cell animation
+                }
             }
         }
     }

@@ -18,8 +18,7 @@ class OptionsCollectionCell: UICollectionViewCell {
     @IBOutlet weak var optionDesc: UILabel!
     
     @IBOutlet weak var space: UILabel!
-    
-    var isPressed = false
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

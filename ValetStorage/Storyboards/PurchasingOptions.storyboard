@@ -33,6 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="YUq-eU-doe">
                             <size key="itemSize" width="330" height="410"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -88,6 +89,7 @@
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="eQn-ZG-ulw" firstAttribute="top" secondItem="oL4-Lm-atu" secondAttribute="bottom" constant="16" id="0FH-Y8-8Uy"/>
                                     <constraint firstAttribute="bottom" secondItem="LLQ-Fo-mzh" secondAttribute="bottom" constant="16" id="0mF-RH-fZY"/>
