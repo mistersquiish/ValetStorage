@@ -11,8 +11,13 @@ import UIKit
 class OptionsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var optionsNameLabel: UILabel!
-
+    @IBOutlet weak var price: UILabel!
+    
     @IBOutlet weak var optionImage: UIImageView!
+
+    @IBOutlet weak var optionDesc: UILabel!
+    
+    @IBOutlet weak var space: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
