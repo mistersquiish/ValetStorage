@@ -28,8 +28,8 @@ class LoginService{
         // Create the server trust policies
         let serverTrustPolicies: [String: ServerTrustPolicy] = [
             
-            "stage.valet.storage": .disableEvaluation,
-            "apistaging.valet.storage": .disableEvaluation
+            "valet.storage": .disableEvaluation,
+            "api.valet.storage": .disableEvaluation
         ]
         
         // Create custom manager
@@ -82,7 +82,7 @@ class LoginService{
                 "password": password,
                 ]
             let header: HTTPHeaders = ["Accept": "application/json"]
-            LoginService.Manager.request("https://apistaging.valet.storage/signin", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
+            LoginService.Manager.request("https://api.valet.storage/signin", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
                 if response.result.isSuccess {
                     let data = response.result.value as? [String: Any]
                     TokenKeychain.updateAccessToken(accessToken: data!["token"] as! String)
@@ -138,7 +138,7 @@ class LoginService{
                 "username": full_name
             ]
             let header: HTTPHeaders = ["Accept": "application/json"]
-            LoginService.Manager.request("https://apistaging.valet.storage/signup", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
+            LoginService.Manager.request("https://api.valet.storage/signup", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
                 if response.result.isSuccess {
                     let data = response.result.value as? [String: Any]
                     if (data!["error"] as? String) != nil {

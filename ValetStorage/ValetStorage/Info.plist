@@ -45,7 +45,7 @@
     <dict>
         <key>NSExceptionDomains</key>
         <dict>
-            <key>stage.valet.storage</key>
+            <key>valet.storage</key>
             <dict>
                 <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
                 <true/>
@@ -54,7 +54,7 @@
                 <key>NSIncludesSubdomains</key>
                 <true/>
             </dict>
-            <key>apistaging.valet.storage</key>
+            <key>api.valet.storage</key>
             <dict>
                 <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
                 <true/>
