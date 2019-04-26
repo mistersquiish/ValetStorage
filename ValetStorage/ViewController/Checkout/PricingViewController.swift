@@ -15,7 +15,7 @@ class PricingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        OrderType.getOrderTypeInfo(orderType: orderType)
     }
 
     override func didReceiveMemoryWarning() {

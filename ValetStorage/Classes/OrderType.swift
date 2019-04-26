@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class OrderType {
     var name: String!
@@ -64,6 +65,24 @@ class OrderType {
     }
     
     static func getOrderTypeInfo(orderType: OrderType) {
+        CustomAlamoManager.handleAuthChallenge()
         
+        //Web service Request
+        let parameters = [
+            "id": orderType.id ?? "0"
+        ]
+        let header: HTTPHeaders = ["Accept": "application/json"]
+        CustomAlamoManager.Manager.request("https://api.valet.storage/requests/ordertype", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
+            if response.result.isSuccess {
+                let data = response.result.value as? [String: Any]
+                if (data!["_id"] as? String) != nil {
+                    print("asdf")
+                } else {
+                    print("asdf3")
+                }
+                
+            } else {
+            }
+        }
     }
 }

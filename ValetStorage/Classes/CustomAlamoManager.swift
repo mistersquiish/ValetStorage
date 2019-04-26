@@ -32,7 +32,6 @@ class CustomAlamoManager {
     
     // Don't think we need this anymore but it's here just in case
     // function handles the authentication challenge
-    /*
     public static func handleAuthChallenge() {
         let delegate: Alamofire.SessionDelegate = CustomAlamoManager.Manager.delegate
         delegate.sessionDidReceiveChallenge = { session, challenge in
@@ -54,6 +53,6 @@ class CustomAlamoManager {
             return (disposition, credential)
         }
     }
-     */
+ 
 
 }
