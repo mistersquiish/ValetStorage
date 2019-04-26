@@ -34,4 +34,20 @@ class OptionsCollectionCell: UICollectionViewCell {
         self.layer.shadowOffset = CGSize(width: -2, height: 2)
         self.layer.shadowRadius = self.contentView.layer.cornerRadius
     }
+    
+    override var isHighlighted: Bool {
+        didSet {
+            shrink(down: isHighlighted)
+        }
+    }
+    
+    func shrink(down: Bool) {
+        UIView.animate(withDuration: 0.6) {
+            if down {
+                self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            } else {
+                    self.transform = .identity
+                }
+            }
+    }
 }

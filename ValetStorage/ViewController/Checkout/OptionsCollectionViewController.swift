@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OptionsCollectionViewController: UICollectionViewController, UIGestureRecognizerDelegate {
+class OptionsCollectionViewController: UICollectionViewController {
     
     var valetStorageOptions = ["Bins", "5' X 5' Unit", "5' X 10' Unit", "10' X 10' Unit", "7.5' X 10' Unit", "10' X 15' Unit"]
     
@@ -24,11 +24,6 @@ class OptionsCollectionViewController: UICollectionViewController, UIGestureReco
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign out", style: .plain, target: self, action: #selector(signOut))
-
-        let pressGesture = UILongPressGestureRecognizer(target: self, action: #selector(holdCell(recognizer:)))
-        pressGesture.minimumPressDuration = 1
-        collectionView?.addGestureRecognizer(pressGesture)
-        pressGesture.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,16 +82,6 @@ class OptionsCollectionViewController: UICollectionViewController, UIGestureReco
         }
     }
     
-    @objc func holdCell(recognizer: UILongPressGestureRecognizer) {
-        if recognizer.state == UIGestureRecognizerState.began {
-            let pressedLocation = recognizer.location(in: self.collectionView)
-            if let pressedIndexPath = self.collectionView?.indexPathForItem(at: pressedLocation) {
-                if let pressedCell = self.collectionView?.cellForItem(at: pressedIndexPath) as? OptionsCollectionCell {
-                    // do cell animation
-                }
-            }
-        }
-    }
     // MARK: UICollectionViewDelegate
 
     /*

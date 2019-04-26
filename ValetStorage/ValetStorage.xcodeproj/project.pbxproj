@@ -18,6 +18,7 @@
 		28A1811B225B0F330085B5C9 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A18118225B0F330085B5C9 /* ColorScheme.swift */; };
 		28A1811E225B0F4E0085B5C9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1811C225B0F4E0085B5C9 /* SignupViewController.swift */; };
 		28A1811F225B0F4E0085B5C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1811D225B0F4E0085B5C9 /* LoginViewController.swift */; };
+		28BCF7B4227395D000FE570F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BCF7B3227395D000FE570F /* Order.swift */; };
 		28BE7CE722541D0900C4DCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7CE622541D0900C4DCE9 /* AppDelegate.swift */; };
 		28BE7CEF22541D0900C4DCE9 /* ValetStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7CED22541D0900C4DCE9 /* ValetStorage.xcdatamodeld */; };
 		28BE7CF122541D0A00C4DCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28BE7CF022541D0A00C4DCE9 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		28A18118225B0F330085B5C9 /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		28A1811C225B0F4E0085B5C9 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		28A1811D225B0F4E0085B5C9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		28BCF7B3227395D000FE570F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		28BE7CE322541D0900C4DCE9 /* ValetStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValetStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BE7CE622541D0900C4DCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28BE7CEE22541D0900C4DCE9 /* ValetStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ValetStorage.xcdatamodel; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				28A18118225B0F330085B5C9 /* ColorScheme.swift */,
 				28A18117225B0F330085B5C9 /* LoginService.swift */,
 				28A18116225B0F330085B5C9 /* TokenKeychain.swift */,
+				28BCF7B3227395D000FE570F /* Order.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				289E7E21226EDDAC00797FFA /* OptionsCollectionViewController.swift in Sources */,
 				28A1811E225B0F4E0085B5C9 /* SignupViewController.swift in Sources */,
 				28BE7CEF22541D0900C4DCE9 /* ValetStorage.xcdatamodeld in Sources */,
+				28BCF7B4227395D000FE570F /* Order.swift in Sources */,
 				C4BD420E22599710005843F4 /* WalkThroughViewController.swift in Sources */,
 				28A1811B225B0F330085B5C9 /* ColorScheme.swift in Sources */,
 				289E7E1F226EDD3E00797FFA /* OptionsCollectionCell.swift in Sources */,
