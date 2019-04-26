@@ -19,6 +19,8 @@
 		28A1811E225B0F4E0085B5C9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1811C225B0F4E0085B5C9 /* SignupViewController.swift */; };
 		28A1811F225B0F4E0085B5C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1811D225B0F4E0085B5C9 /* LoginViewController.swift */; };
 		28BCF7B4227395D000FE570F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BCF7B3227395D000FE570F /* Order.swift */; };
+		28BCF7B622739CAB00FE570F /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BCF7B522739CAB00FE570F /* OrderType.swift */; };
+		28BCF7B82273AA0C00FE570F /* CustomAlamoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BCF7B72273AA0C00FE570F /* CustomAlamoManager.swift */; };
 		28BE7CE722541D0900C4DCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7CE622541D0900C4DCE9 /* AppDelegate.swift */; };
 		28BE7CEF22541D0900C4DCE9 /* ValetStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7CED22541D0900C4DCE9 /* ValetStorage.xcdatamodeld */; };
 		28BE7CF122541D0A00C4DCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28BE7CF022541D0A00C4DCE9 /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 		28A1811C225B0F4E0085B5C9 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		28A1811D225B0F4E0085B5C9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		28BCF7B3227395D000FE570F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		28BCF7B522739CAB00FE570F /* OrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
+		28BCF7B72273AA0C00FE570F /* CustomAlamoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlamoManager.swift; sourceTree = "<group>"; };
 		28BE7CE322541D0900C4DCE9 /* ValetStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValetStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BE7CE622541D0900C4DCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28BE7CEE22541D0900C4DCE9 /* ValetStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ValetStorage.xcdatamodel; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				28A18117225B0F330085B5C9 /* LoginService.swift */,
 				28A18116225B0F330085B5C9 /* TokenKeychain.swift */,
 				28BCF7B3227395D000FE570F /* Order.swift */,
+				28BCF7B522739CAB00FE570F /* OrderType.swift */,
+				28BCF7B72273AA0C00FE570F /* CustomAlamoManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -561,8 +567,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BCF7B622739CAB00FE570F /* OrderType.swift in Sources */,
 				289E7E19226EDB3F00797FFA /* PricingViewController.swift in Sources */,
 				C4884EC42255283B0002D71D /* WalkThroughContentController.swift in Sources */,
+				28BCF7B82273AA0C00FE570F /* CustomAlamoManager.swift in Sources */,
 				28A18119225B0F330085B5C9 /* TokenKeychain.swift in Sources */,
 				289E7E21226EDDAC00797FFA /* OptionsCollectionViewController.swift in Sources */,
 				28A1811E225B0F4E0085B5C9 /* SignupViewController.swift in Sources */,

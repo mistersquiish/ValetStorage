@@ -10,18 +10,14 @@ import UIKit
 
 class OptionsCollectionViewController: UICollectionViewController {
     
-    var valetStorageOptions = ["Bins", "5' X 5' Unit", "5' X 10' Unit", "10' X 10' Unit", "7.5' X 10' Unit", "10' X 15' Unit"]
-    
-    var valetStorageOptionImages = ["Options-1", "Options-2", "Options-3", "Options-4", "Options-5", "Options-6"]
-    
-    var valetStorageDesc = ["Perfect for unloading a few bins of winter clothes or childhood memorabilia.", "Free up your garage, or store baby gear until you need it again.", "Large walk-in closet. Anything you can fit there, fits here!", "Universal size that will fit almost anyone’s needs.  Perfect closet size.", "The size of a guest bedroom. Use ours if you don’t have your own!", "If you have more than just one bedroom, this will be plenty to help you out."]
-    
-    var valetStoragePrice = ["$6/month", "$66/month", "$85/month", "$123/month", "$184/month", "$260/month"]
-    var valetStorageSpace = ["Bins are 17″ x 27″ x 12″", "130 cubic feet of usable space.", "260 cubic feet of usable space.", "390 cubic feet of usable space.", "520 cubic feet of usable space.", "780 cubic feet of usable space."]
-    
+    var valetStorageOptionNames = ["Bins", "5' X 5' Unit", "5' X 10' Unit", "10' X 10' Unit", "7.5' X 10' Unit", "10' X 15' Unit"]
+    var valetStorageOptions: [OrderType?]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for names in self.valetStorageOptionNames {
+            self.valetStorageOptions.append(OrderType(orderType: names))
+        }
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign out", style: .plain, target: self, action: #selector(signOut))
     }
@@ -56,11 +52,12 @@ class OptionsCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OptionsCell", for: indexPath) as! OptionsCollectionCell
-        cell.optionsNameLabel.text = valetStorageOptions[indexPath.row]
-        cell.optionImage.image = UIImage(named: valetStorageOptionImages[indexPath.row])
-        cell.price.text = valetStoragePrice[indexPath.row]
-        cell.space.text = valetStorageSpace[indexPath.row]
-        cell.optionDesc.text = valetStorageDesc[indexPath.row]
+        let orderType = valetStorageOptions[indexPath.row]
+        cell.optionsNameLabel.text = orderType?.name
+        cell.optionImage.image = UIImage(named: (orderType?.imageStr)!)
+        cell.price.text = orderType?.price
+        cell.space.text = orderType?.size
+        cell.optionDesc.text = orderType?.description
     
         return cell
     }
@@ -77,7 +74,7 @@ class OptionsCollectionViewController: UICollectionViewController {
             if let indexPath = collectionView?.indexPath(for: cell) {
                 let option = valetStorageOptions[indexPath.row]
                 let pricingViewController = segue.destination as! PricingViewController
-                pricingViewController.option = option
+                pricingViewController.orderType = option
             }
         }
     }

@@ -7,3 +7,30 @@
 //
 
 import Foundation
+
+class Order {
+    var orderType: String!
+    var boxQuantity: Int!
+    var initialCost: Float!
+    var monthlyCost: Float!
+    var tax: Float!
+    var monthlyCostTotal: Float!
+    var deliveryZipCode: Int!
+    var deliveryAddress1: String!
+    var dilveryAddress2: String!
+    var deliveryCity: String!
+    var pickupZipCode: Int!
+    var pickupAddress1: String!
+    var pickupAddress2: String!
+    var pickupCity: String!
+    var pickupDate: Date!
+    var deliveryInstructions: String!
+    var pickupInstructions: String!
+    var deliveryDate: Date!
+    var deliveryTime: String!
+    var deliveryState: String!
+    var deliveryDisplayTracker: Int!
+    var pickupTime: String!
+    var pickupState: String!
+
+}

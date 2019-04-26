@@ -10,7 +10,7 @@ import UIKit
 
 class PricingViewController: UIViewController {
 
-    var option: String!
+    var orderType: OrderType!
     
     override func viewDidLoad() {
         super.viewDidLoad()

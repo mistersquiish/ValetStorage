@@ -23,27 +23,6 @@ class LoginService{
         case connectionError
     }
     static var formError: error = error.incompleteForm
-    private static var Manager: Alamofire.SessionManager = {
-        
-        // Create the server trust policies
-        let serverTrustPolicies: [String: ServerTrustPolicy] = [
-            
-            "valet.storage": .disableEvaluation,
-            "api.valet.storage": .disableEvaluation
-        ]
-        
-        // Create custom manager
-        let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
-        let manager = Alamofire.SessionManager(
-            configuration: URLSessionConfiguration.default,
-            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
-        )
-        
-        return manager
-    }()
-    
-    
     
     /**
      Calls the Login Web Service to authenticate the user
@@ -54,27 +33,6 @@ class LoginService{
             self.formError = error.incompleteForm
             completion()
         } else {
-            // Handle Authentication challenge
-            
-            let delegate: Alamofire.SessionDelegate = LoginService.Manager.delegate
-            delegate.sessionDidReceiveChallenge = { session, challenge in
-                var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
-                var credential: URLCredential?
-                if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
-                    disposition = URLSession.AuthChallengeDisposition.useCredential
-                    credential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
-                } else {
-                    if challenge.previousFailureCount > 0 {
-                        disposition = .cancelAuthenticationChallenge
-                    } else {
-                        credential = LoginService.Manager.session.configuration.urlCredentialStorage?.defaultCredential(for: challenge.protectionSpace)
-                        if credential != nil {
-                            disposition = .useCredential
-                        }
-                    }
-                }
-                return (disposition, credential)
-            }
             
             //Web service Request
             let parameters = [
@@ -82,7 +40,7 @@ class LoginService{
                 "password": password,
                 ]
             let header: HTTPHeaders = ["Accept": "application/json"]
-            LoginService.Manager.request("https://api.valet.storage/signin", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
+            CustomAlamoManager.Manager.request("https://api.valet.storage/signin", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
                 if response.result.isSuccess {
                     let data = response.result.value as? [String: Any]
                     TokenKeychain.updateAccessToken(accessToken: data!["token"] as! String)
@@ -109,27 +67,6 @@ class LoginService{
             self.formError = error.shortPassword
             completion()
         } else {
-            // Handle Authentication challenge
-            
-            let delegate: Alamofire.SessionDelegate = LoginService.Manager.delegate
-            delegate.sessionDidReceiveChallenge = { session, challenge in
-                var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
-                var credential: URLCredential?
-                if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
-                    disposition = URLSession.AuthChallengeDisposition.useCredential
-                    credential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
-                } else {
-                    if challenge.previousFailureCount > 0 {
-                        disposition = .cancelAuthenticationChallenge
-                    } else {
-                        credential = LoginService.Manager.session.configuration.urlCredentialStorage?.defaultCredential(for: challenge.protectionSpace)
-                        if credential != nil {
-                            disposition = .useCredential
-                        }
-                    }
-                }
-                return (disposition, credential)
-            }
             
             //Web service Request
             let parameters = [
@@ -138,7 +75,7 @@ class LoginService{
                 "username": full_name
             ]
             let header: HTTPHeaders = ["Accept": "application/json"]
-            LoginService.Manager.request("https://api.valet.storage/signup", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
+            CustomAlamoManager.Manager.request("https://api.valet.storage/signup", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
                 if response.result.isSuccess {
                     let data = response.result.value as? [String: Any]
                     if (data!["error"] as? String) != nil {
