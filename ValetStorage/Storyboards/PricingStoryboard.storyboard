@@ -36,7 +36,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description testing of the valet storage stuff" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQM-x8-UUx">
-                                                        <rect key="frame" x="5" y="8" width="298" height="36"/>
+                                                        <rect key="frame" x="5" y="8" width="346" height="83"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,20 +71,19 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFM-s7-spy">
                                                 <rect key="frame" x="222" y="428" width="43" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="quantity-add"/>
+                                                <state key="normal" image="quantity-add-0"/>
+                                                <connections>
+                                                    <action selector="quantityAddButton:" destination="TsS-0B-Gcu" eventType="touchUpInside" id="da5-XL-wyX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crm-Ei-Kes">
                                                 <rect key="frame" x="88" y="428" width="43" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="quantity-subtract"/>
+                                                <state key="normal" image="quantity-subtract-0"/>
+                                                <connections>
+                                                    <action selector="quantitySubtractButton:" destination="TsS-0B-Gcu" eventType="touchUpInside" id="2ez-s2-hX8"/>
+                                                </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKm-qT-FBt">
-                                                <rect key="frame" x="146" y="433" width="68" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtotal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojo-yT-XmP">
                                                 <rect key="frame" x="137" y="488" width="86" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -92,8 +91,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$66.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWd-VU-0sn">
-                                                <rect key="frame" x="146" y="524" width="64" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$198.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWd-VU-0sn">
+                                                <rect key="frame" x="146" y="524" width="73" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <nil key="textColor"/>
@@ -164,6 +163,13 @@
                                                 <rect key="frame" x="69" y="77" width="240" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjO-jb-Uze">
+                                                <rect key="frame" x="156" y="433" width="42" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -193,6 +199,21 @@
                     </view>
                     <navigationItem key="navigationItem" id="LrO-Tb-DLi"/>
                     <size key="freeformSize" width="375" height="1100"/>
+                    <connections>
+                        <outlet property="nextButtonOutlet" destination="FiF-f7-lLw" id="qfe-hp-kp8"/>
+                        <outlet property="optionDescriptionLabel" destination="sQM-x8-UUx" id="5Ya-nK-XBL"/>
+                        <outlet property="optionImageView" destination="iUo-cK-TBs" id="J45-j7-6BS"/>
+                        <outlet property="optionNameLabel" destination="8QC-4t-EIf" id="0dq-K1-HHs"/>
+                        <outlet property="optionPriceLabel" destination="OyM-mQ-RLy" id="Jrz-O5-QtA"/>
+                        <outlet property="optionSubtotalLabel" destination="bWd-VU-0sn" id="e8Z-xO-c4e"/>
+                        <outlet property="quantityAddButtonOutlet" destination="LFM-s7-spy" id="DDd-XC-Vb4"/>
+                        <outlet property="quantityLabel" destination="XjO-jb-Uze" id="Rhl-Yo-HTJ"/>
+                        <outlet property="quantitySubtractButtonOutlet" destination="crm-Ei-Kes" id="rGw-Wc-cIG"/>
+                        <outlet property="reviewMonthlyTotalLabel" destination="p3H-E0-sPv" id="6hh-uH-9CE"/>
+                        <outlet property="reviewSubtotalLabel" destination="sEb-Cc-p4c" id="aHv-A7-lOt"/>
+                        <outlet property="reviewTaxLabel" destination="pbK-DV-6et" id="oEp-cs-dqK"/>
+                        <outlet property="total3MonthLabel" destination="6MI-5c-Ckd" id="wbH-Vm-keq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxt-IP-Lex" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,7 +240,7 @@
     </scenes>
     <resources>
         <image name="Pricing-1" width="400" height="326"/>
-        <image name="quantity-add" width="114" height="105"/>
-        <image name="quantity-subtract" width="114" height="105"/>
+        <image name="quantity-add-0" width="114" height="105"/>
+        <image name="quantity-subtract-0" width="114" height="105"/>
     </resources>
 </document>

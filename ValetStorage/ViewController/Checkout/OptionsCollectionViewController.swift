@@ -54,7 +54,7 @@ class OptionsCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OptionsCell", for: indexPath) as! OptionsCollectionCell
         let orderType = valetStorageOptions[indexPath.row]
         cell.optionsNameLabel.text = orderType?.name
-        cell.optionImage.image = UIImage(named: (orderType?.optionsImageStr)!)
+        cell.optionImage.image = orderType?.optionsImage
         cell.price.text = orderType?.optionsPriceStr
         cell.space.text = orderType?.optionsSize
         cell.optionDesc.text = orderType?.optionsDescription
