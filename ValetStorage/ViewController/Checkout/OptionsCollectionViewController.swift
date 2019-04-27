@@ -54,10 +54,10 @@ class OptionsCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OptionsCell", for: indexPath) as! OptionsCollectionCell
         let orderType = valetStorageOptions[indexPath.row]
         cell.optionsNameLabel.text = orderType?.name
-        cell.optionImage.image = UIImage(named: (orderType?.imageStr)!)
-        cell.price.text = orderType?.price
-        cell.space.text = orderType?.size
-        cell.optionDesc.text = orderType?.description
+        cell.optionImage.image = UIImage(named: (orderType?.optionsImageStr)!)
+        cell.price.text = orderType?.optionsPriceStr
+        cell.space.text = orderType?.optionsSize
+        cell.optionDesc.text = orderType?.optionsDescription
     
         return cell
     }
@@ -70,13 +70,14 @@ class OptionsCollectionViewController: UICollectionViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PricingSegue" {
-            let cell = sender as! UICollectionViewCell
+            let cell = sender as! OptionsCollectionCell
             if let indexPath = collectionView?.indexPath(for: cell) {
                 let option = valetStorageOptions[indexPath.row]
                 let pricingViewController = segue.destination as! PricingViewController
                 pricingViewController.orderType = option
             }
         }
+        
     }
     
     // MARK: UICollectionViewDelegate

@@ -88,7 +88,7 @@
                                         </imageView>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.879828155" green="0.96633678670000001" blue="0.96926194430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="eQn-ZG-ulw" firstAttribute="top" secondItem="oL4-Lm-atu" secondAttribute="bottom" constant="16" id="0FH-Y8-8Uy"/>
