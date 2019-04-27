@@ -160,7 +160,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Next"/>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iUo-cK-TBs">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pricing-1" translatesAutoresizingMaskIntoConstraints="NO" id="iUo-cK-TBs">
                                                 <rect key="frame" x="69" y="77" width="240" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -218,6 +218,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Pricing-1" width="400" height="326"/>
         <image name="quantity-add" width="114" height="105"/>
         <image name="quantity-subtract" width="114" height="105"/>
     </resources>
