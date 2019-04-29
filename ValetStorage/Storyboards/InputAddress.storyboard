@@ -151,12 +151,16 @@
                                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GC-UA-Joi">
-                                                <rect key="frame" x="171" y="758" width="32" height="47"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzW-r9-Nkc">
+                                                <rect key="frame" x="16" y="760" width="343" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Next"/>
+                                                <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
-                                                    <action selector="nextButton:" destination="95L-t8-AeI" eventType="touchUpInside" id="tQE-Re-3MY"/>
+                                                    <action selector="nextButton:" destination="95L-t8-AeI" eventType="touchUpInside" id="7yQ-aT-STM"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -188,17 +192,27 @@
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="inputError" destination="8xi-kE-Cxh" id="uQj-Mf-6ki"/>
-                        <outlet property="otherAddress" destination="cvn-qg-1B5" id="8Il-jP-wdS"/>
-                        <outlet property="phoneNum" destination="LZ8-iF-xD9" id="Ci5-84-4qk"/>
-                        <outlet property="specialInstructions" destination="sV2-gU-T0b" id="WMK-1v-KD5"/>
-                        <outlet property="streetAddress" destination="ZAF-Bm-O5N" id="gVN-nN-iDg"/>
-                        <outlet property="zipCode" destination="X4l-co-RJW" id="TLu-Wk-IHC"/>
+                        <outlet property="nextButtonOutlet" destination="xzW-r9-Nkc" id="BY9-AJ-uWC"/>
+                        <outlet property="otherAddressTextField" destination="cvn-qg-1B5" id="Wjl-8a-8HW"/>
+                        <outlet property="phoneNumTextField" destination="LZ8-iF-xD9" id="7CZ-tV-Lkd"/>
+                        <outlet property="specialInstructionsTextField" destination="sV2-gU-T0b" id="H5K-bw-nC9"/>
+                        <outlet property="streetAddressTextField" destination="ZAF-Bm-O5N" id="DQF-c5-cBz"/>
+                        <outlet property="zipCodeTextField" destination="X4l-co-RJW" id="lTG-md-zYV"/>
+                        <segue destination="giZ-Sq-KBm" kind="show" identifier="AdditionalInfoSegue" id="J1R-Dp-G8S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9r-X8-zov" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jTT-iF-BBj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1274.4000000000001" y="-200.59970014992504"/>
+        </scene>
+        <!--AdditionalInfo-->
+        <scene sceneID="LCh-9k-8DB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AdditionalInfo" referencedIdentifier="AdditionalInfo" id="giZ-Sq-KBm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anQ-BA-gjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2093" y="-222"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ya7-VG-3ij">

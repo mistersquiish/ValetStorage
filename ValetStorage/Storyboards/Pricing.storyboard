@@ -246,7 +246,7 @@
                                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="6Sn-rP-Ttq" kind="show" id="K8G-S7-wk4"/>
+                                                    <segue destination="6Sn-rP-Ttq" kind="show" identifier="InputAddressSegue" id="K8G-S7-wk4"/>
                                                 </connections>
                                             </button>
                                         </subviews>

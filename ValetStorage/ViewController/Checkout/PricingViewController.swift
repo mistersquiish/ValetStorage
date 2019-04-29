@@ -26,6 +26,7 @@ class PricingViewController: UIViewController {
     
     
     var orderType: OrderType!
+    var order: Order!
     
     // variables to help calculate totals
     var subtotal: Float!
@@ -62,11 +63,15 @@ class PricingViewController: UIViewController {
             self.optionPriceLabel.text = formatter.string(from: NSNumber(value: self.orderType.price))
             self.optionDescriptionLabel.text = self.orderType.pricingDescription
             self.updateUI()
+            self.order.orderType = self.orderType
         })
         
         // create image arrays for button animations
         quantitySubtractImages = createImageArray(imagePrefix: "quantity-subtract")
         quantityAddImages = createImageArray(imagePrefix: "quantity-add")
+        
+        // create order
+        order = Order()
     }
 
     override func didReceiveMemoryWarning() {
@@ -123,4 +128,11 @@ class PricingViewController: UIViewController {
         imageView.startAnimating()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "InputAddressSegue" {
+            let inputAddressViewController = segue.destination as! InputAddressViewController
+            inputAddressViewController.order = order
+        }
+        
+    }
 }
