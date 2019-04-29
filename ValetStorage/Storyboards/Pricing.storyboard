@@ -158,6 +158,9 @@
                                                 <rect key="frame" x="171" y="860" width="32" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Next"/>
+                                                <connections>
+                                                    <segue destination="6Sn-rP-Ttq" kind="show" id="tAg-GC-MgQ"/>
+                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pricing-1" translatesAutoresizingMaskIntoConstraints="NO" id="iUo-cK-TBs">
                                                 <rect key="frame" x="69" y="77" width="240" height="128"/>
@@ -218,6 +221,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxt-IP-Lex" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1136.8" y="171.81409295352324"/>
+        </scene>
+        <!--InputAddress-->
+        <scene sceneID="KSr-m5-JHI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InputAddress" referencedIdentifier="InputAddress" id="6Sn-rP-Ttq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VGe-tw-O2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1918" y="226"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cOj-E8-JU6">

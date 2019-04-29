@@ -20,7 +20,7 @@
         <!--PricingViewController-->
         <scene sceneID="7ur-LB-Cnz">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="PricingView" storyboardName="PricingStoryboard" referencedIdentifier="PricingViewController" id="jFK-NO-8xc" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="PricingView" storyboardName="Pricing" referencedIdentifier="PricingViewController" id="jFK-NO-8xc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ltf-T4-gLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2440" y="52"/>
