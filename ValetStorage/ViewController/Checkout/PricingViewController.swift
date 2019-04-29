@@ -37,9 +37,11 @@ class PricingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
         orderType.getOrderTypeInfo(completion: { () -> () in
-            self.optionPriceLabel.text = "$" + String(self.orderType.price)
+            self.optionPriceLabel.text = formatter.string(from: NSNumber(value: self.orderType.price))
             self.optionDescriptionLabel.text = self.orderType.pricingDescription
         })
         quantityLabel.layer.borderWidth = 0.5
