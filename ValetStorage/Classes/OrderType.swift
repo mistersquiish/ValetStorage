@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+// object that creates the order type with associated information
 class OrderType {
     var name: String!
     var price: Float! = 0

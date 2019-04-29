@@ -15,6 +15,8 @@ class OptionsCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // create the OrderType variables for all the options and add to list
         for names in self.valetStorageOptionNames {
             self.valetStorageOptions.append(OrderType(orderType: names))
         }

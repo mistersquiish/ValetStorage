@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Object to store data as a user navigates the checkout process
 class Order {
     var orderType: String!
     var boxQuantity: Int!

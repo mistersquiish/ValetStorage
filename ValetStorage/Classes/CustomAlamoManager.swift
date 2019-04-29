@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 
+// Challenges SSL Authentication and allows communciation with the Valet Storage API
+// Should be removed when pushed to production as Apple will not allow authentication challenges
 class CustomAlamoManager {
     public static var Manager: Alamofire.SessionManager = {
         

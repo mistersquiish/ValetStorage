@@ -251,6 +251,7 @@
 		C4729708225E4232000461B3 /* WalkThrough */ = {
 			isa = PBXGroup;
 			children = (
+				2832F248225D9D4900814669 /* Checkout */,
 				C4884EC32255283B0002D71D /* WalkThroughContentController.swift */,
 				C4884EC5225539B30002D71D /* WalkthroughPageViewController.swift */,
 				C4BD420D22599710005843F4 /* WalkThroughViewController.swift */,
@@ -262,7 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				C4729708225E4232000461B3 /* WalkThrough */,
-				2832F248225D9D4900814669 /* Checkout */,
 				28055B64225A83AF001104B4 /* Login */,
 			);
 			path = ViewController;

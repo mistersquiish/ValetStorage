@@ -42,6 +42,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         loginButtonOutlet.layer.cornerRadius = 12
         loginButtonOutlet.clipsToBounds = true
         
+        // add oberserver methods to allow keyboard to dismiss
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
@@ -68,10 +69,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
             self.updateFormFeedback()
         })
        
-    }
-    
-    @IBAction func signupButton(_ sender: Any) {
-        
     }
     
     func updateFormFeedback() {

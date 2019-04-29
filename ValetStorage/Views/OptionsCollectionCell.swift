@@ -41,6 +41,7 @@ class OptionsCollectionCell: UICollectionViewCell {
         }
     }
     
+    // shrinking animation
     func shrink(down: Bool) {
         UIView.animate(withDuration: 0.6) {
             if down {

@@ -12,7 +12,6 @@ class PricingViewController: UIViewController {
 
     @IBOutlet weak var optionNameLabel: UILabel!
     @IBOutlet weak var optionImageView: UIImageView!
-    
     @IBOutlet weak var optionDescriptionLabel: UILabel!
     @IBOutlet weak var optionPriceLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
@@ -28,23 +27,19 @@ class PricingViewController: UIViewController {
     
     var orderType: OrderType!
     
+    // variables to help calculate totals
     var subtotal: Float!
     var tax: Float!
     var monthlyTotal: Float!
     
+    // variables for animated buttons
     var quantitySubtractImages: [UIImage] = []
     var quantityAddImages: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        orderType.getOrderTypeInfo(completion: { () -> () in
-            self.optionPriceLabel.text = formatter.string(from: NSNumber(value: self.orderType.price))
-            self.optionDescriptionLabel.text = self.orderType.pricingDescription
-            self.updateUI()
-        })
+        // UI settings
         quantityLabel.layer.borderWidth = 0.5
         quantityLabel.layer.borderColor = UIColor.gray.cgColor
         nextButtonOutlet.layer.masksToBounds = false
@@ -52,15 +47,24 @@ class PricingViewController: UIViewController {
         nextButtonOutlet.layer.cornerRadius = 12
         nextButtonOutlet.clipsToBounds = true
         nextButtonOutlet.backgroundColor = ColorScheme.valet_orange
-        
+        optionDescriptionLabel.text = orderType.pricingDescription
+        // if option is 'Bins', use the secondary image
         if orderType.id == "5b5837ba4da6f3c0e03134bf" {
             optionImageView.image = orderType.optionsImage2
         } else {
             optionImageView.image = orderType.optionsImage
         }
         
-        optionDescriptionLabel.text = orderType.pricingDescription
+        // call the API to retrieve pricing information and update UI
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        orderType.getOrderTypeInfo(completion: { () -> () in
+            self.optionPriceLabel.text = formatter.string(from: NSNumber(value: self.orderType.price))
+            self.optionDescriptionLabel.text = self.orderType.pricingDescription
+            self.updateUI()
+        })
         
+        // create image arrays for button animations
         quantitySubtractImages = createImageArray(imagePrefix: "quantity-subtract")
         quantityAddImages = createImageArray(imagePrefix: "quantity-add")
     }
