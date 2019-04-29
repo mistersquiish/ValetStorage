@@ -21,6 +21,7 @@ class OrderType {
     var optionsSize: String!
     
     var pricingDescription: String!
+    var pricingRetrieved: Bool = false
     
     init(orderType: String!) {
         switch orderType {
@@ -78,27 +79,32 @@ class OrderType {
     }
     
     func getOrderTypeInfo(completion: @escaping () -> Void) {
-        
-        //Web service Request
-        let parameters = [
-            "id": self.id ?? "0"
-        ]
-        let header: HTTPHeaders = ["Accept": "application/json"]
-        CustomAlamoManager.Manager.request("https://api.valet.storage/requests/ordertype", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
-            if response.result.isSuccess {
-                let data = response.result.value as? [String: Any]
-                if (data!["_id"] as? String) != nil {
-                    self.price = data!["price"] as! Float
-                    self.pricingDescription = self.pricingDescription + String(self.price) + "/month. Initial delivery and pick-up of bins is FREE. Additional deliveries, pick-ups and re-deliveries are $17 each."
-                    completion()
+        if self.pricingRetrieved == false {
+            //Web service Request
+            let parameters = [
+                "id": self.id ?? "0"
+            ]
+            let header: HTTPHeaders = ["Accept": "application/json"]
+            CustomAlamoManager.Manager.request("https://api.valet.storage/requests/ordertype", method: .post, parameters: parameters, encoding: JSONEncoding(options: []),headers :header).responseJSON { response in
+                if response.result.isSuccess {
+                    let data = response.result.value as? [String: Any]
+                    if (data!["_id"] as? String) != nil {
+                        self.price = data!["price"] as! Float
+                        self.pricingDescription = self.pricingDescription + String(self.price) + "/month. Initial delivery and pick-up of bins is FREE. Additional deliveries, pick-ups and re-deliveries are $17 each."
+                        self.pricingRetrieved = true
+                        completion()
+                    } else {
+                        self.price = 0
+                        completion()
+                    }
+                    
                 } else {
-                    self.price = 0
                     completion()
                 }
-                
-            } else {
-                completion()
             }
+        } else {
+            completion()
         }
+        
     }
 }

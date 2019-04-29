@@ -43,9 +43,15 @@ class PricingViewController: UIViewController {
         orderType.getOrderTypeInfo(completion: { () -> () in
             self.optionPriceLabel.text = formatter.string(from: NSNumber(value: self.orderType.price))
             self.optionDescriptionLabel.text = self.orderType.pricingDescription
+            self.updateUI()
         })
         quantityLabel.layer.borderWidth = 0.5
         quantityLabel.layer.borderColor = UIColor.gray.cgColor
+        nextButtonOutlet.layer.masksToBounds = false
+        nextButtonOutlet.layer.borderWidth = 0.5
+        nextButtonOutlet.layer.cornerRadius = 12
+        nextButtonOutlet.clipsToBounds = true
+        nextButtonOutlet.backgroundColor = ColorScheme.valet_orange
         
         if orderType.id == "5b5837ba4da6f3c0e03134bf" {
             optionImageView.image = orderType.optionsImage2
