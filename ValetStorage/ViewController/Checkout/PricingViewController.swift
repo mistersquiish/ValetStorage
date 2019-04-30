@@ -56,6 +56,9 @@ class PricingViewController: UIViewController {
             optionImageView.image = orderType.optionsImage
         }
         
+        // create order
+        order = Order()
+        
         // call the API to retrieve pricing information and update UI
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency

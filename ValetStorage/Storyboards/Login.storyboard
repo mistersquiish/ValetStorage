@@ -61,7 +61,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Create an Account"/>
                                 <connections>
-                                    <action selector="signupButton:" destination="NWy-HH-uBi" eventType="touchUpInside" id="nbc-qs-egd"/>
                                     <segue destination="Ugb-D3-gVF" kind="presentation" id="PXq-ix-MkA"/>
                                 </connections>
                             </button>
@@ -150,8 +149,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Already have an account? Sign in"/>
                                 <connections>
-                                    <action selector="signinButton:" destination="Ugb-D3-gVF" eventType="touchUpInside" id="fPR-mv-T8q"/>
-                                    <action selector="signupButton:" destination="NWy-HH-uBi" eventType="touchUpInside" id="RaF-eB-sKx"/>
                                     <segue destination="NWy-HH-uBi" kind="presentation" id="Noy-q3-EOw"/>
                                 </connections>
                             </button>
@@ -246,6 +243,6 @@
         <image name="LogoName" width="3992" height="1165"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SVs-dK-xZd"/>
+        <segue reference="1Fd-Os-H9f"/>
     </inferredMetricsTieBreakers>
 </document>
