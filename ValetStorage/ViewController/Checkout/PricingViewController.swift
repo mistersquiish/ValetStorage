@@ -41,8 +41,6 @@ class PricingViewController: UIViewController {
         super.viewDidLoad()
         
         // UI settings
-        quantityLabel.layer.borderWidth = 0.5
-        quantityLabel.layer.borderColor = UIColor.gray.cgColor
         nextButtonOutlet.layer.masksToBounds = false
         nextButtonOutlet.layer.borderWidth = 0.5
         nextButtonOutlet.layer.cornerRadius = 12
