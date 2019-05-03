@@ -39,6 +39,8 @@ class InputAddressViewController: UIViewController {
             inputError.text = "Enter a valid Austin zip code."
         } else if (streetAddressTextField.text?.count) == 0{
             inputError.text = "Please Input an Address."
+        } else {
+            self.performSegue(withIdentifier: "AdditionalInfoSegue", sender: nil)
         }
     }
 

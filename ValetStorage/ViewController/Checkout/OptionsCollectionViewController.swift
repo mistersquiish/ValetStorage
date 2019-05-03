@@ -10,7 +10,7 @@ import UIKit
 
 class OptionsCollectionViewController: UICollectionViewController {
     
-    var valetStorageOptionNames = ["Bins", "5' X 5' Unit", "5' X 10' Unit", "10' X 10' Unit", "7.5' X 10' Unit", "10' X 15' Unit"]
+    var valetStorageOptionNames = ["Bins", "5' X 5' Unit", "5' X 10' Unit", "7.5' X 10' Unit", "10' X 10' Unit", "10' X 15' Unit"]
     var valetStorageOptions: [OrderType?]! = []
     
     override func viewDidLoad() {
