@@ -56,7 +56,15 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         
         // UITextFieldDelegate to dismiss keyboard on return
         passwordTextField.delegate = self
-        passwordTextField.returnKeyType = .done
+        passwordTextField.returnKeyType = .go
+        passwordTextField.tag = 2
+        emailTextField.delegate = self
+        emailTextField.returnKeyType = .next
+        emailTextField.tag = 1
+        nameTextField.delegate = self
+        nameTextField.returnKeyType = .next
+        nameTextField.tag = 0
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -115,9 +123,24 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
     
     // dismiss keyboard when return is hit
-    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
-        passwordTextField.resignFirstResponder()
-        return true
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            passwordTextField.resignFirstResponder()
+            // perform signup button function
+            LoginService.signup(email: emailTextField.text!, password: passwordTextField.text!, full_name: nameTextField.text!, completion: { () -> () in
+                if TokenKeychain.hasToken() {
+                    self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
+                }
+                self.updateFormFeedback()
+            })
+        }
+        // Do not add a line break
+        return false
     }
     
 }

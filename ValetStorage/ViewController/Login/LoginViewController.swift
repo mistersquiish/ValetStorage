@@ -51,9 +51,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
         
-        // UITextFieldDelegate to dismiss keyboard on return
+        // UITextFieldDelegate to dismiss keyboard on return and next textfield
         passwordTextField.delegate = self
-        passwordTextField.returnKeyType = .done
+        passwordTextField.returnKeyType = .go
+        emailTextField.delegate = self
+        emailTextField.returnKeyType = .next
+        emailTextField.tag = 0
+        passwordTextField.tag = 1
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,8 +69,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         LoginService.login(email: emailTextField.text!, password: passwordTextField.text!, completion: { () -> () in
             if TokenKeychain.hasToken() {
                 self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
+            } else {
+                self.updateFormFeedback()
             }
-            self.updateFormFeedback()
         })
        
     }
@@ -75,7 +80,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         switch LoginService.formError {
         case LoginService.error.wrongPassword:
             formFeedbackLabel.alpha = 1
-            formFeedbackLabel.text = "Wrong password"
+            formFeedbackLabel.text = "Invalid Email or Password"
         default:
             formFeedbackLabel.alpha = 1
             formFeedbackLabel.text = "Please enter an email and password"
@@ -99,10 +104,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         }, completion: nil)
     }
     
-    // dismiss keyboard when return is hit
-    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
-        passwordTextField.resignFirstResponder()
-        return true
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            passwordTextField.resignFirstResponder()
+            // perform login button function
+            LoginService.login(email: emailTextField.text!, password: passwordTextField.text!, completion: { () -> () in
+                if TokenKeychain.hasToken() {
+                    self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
+                }
+                self.updateFormFeedback()
+            })
+        }
+        // Do not add a line break
+        return false
     }
+    
+    
 
 }

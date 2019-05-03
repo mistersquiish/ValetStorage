@@ -58,7 +58,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="s8S-no-oxE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Create an Account"/>
                                 <connections>
                                     <segue destination="Ugb-D3-gVF" kind="presentation" id="PXq-ix-MkA"/>
@@ -146,7 +146,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="is6-fW-gky"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Already have an account? Sign in"/>
                                 <connections>
                                     <segue destination="NWy-HH-uBi" kind="presentation" id="Noy-q3-EOw"/>
