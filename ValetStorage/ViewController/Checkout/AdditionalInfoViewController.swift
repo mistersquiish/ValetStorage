@@ -15,6 +15,7 @@ class AdditionalInfoViewController: UICollectionViewController, nextButtonDelega
     var additionalInfoImageStrings = ["AdditionalInfo-1", "AdditionalInfo-2", "AdditionalInfo-3" ,"AdditionalInfo-4" ,"AdditionalInfo-5" ]
     
     var cells: [AdditionalInfoCell?] = []
+    var order: Order!
     
     override func viewDidLoad() {
         super.viewDidLoad()

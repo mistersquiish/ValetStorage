@@ -25,6 +25,32 @@ class InputAddressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // UI settings
+        nextButtonOutlet.layer.masksToBounds = false
+        nextButtonOutlet.layer.borderWidth = 0.5
+        nextButtonOutlet.layer.cornerRadius = 12
+        nextButtonOutlet.clipsToBounds = true
+        nextButtonOutlet.backgroundColor = ColorScheme.valet_orange
+        phoneNumTextField.layer.masksToBounds = false
+        phoneNumTextField.layer.borderWidth = 0.5
+        phoneNumTextField.layer.cornerRadius = 12
+        phoneNumTextField.clipsToBounds = true
+        zipCodeTextField.layer.masksToBounds = false
+        zipCodeTextField.layer.borderWidth = 0.5
+        zipCodeTextField.layer.cornerRadius = 12
+        zipCodeTextField.clipsToBounds = true
+        otherAddressTextField.layer.masksToBounds = false
+        otherAddressTextField.layer.borderWidth = 0.5
+        otherAddressTextField.layer.cornerRadius = 12
+        otherAddressTextField.clipsToBounds = true
+        streetAddressTextField.layer.masksToBounds = false
+        streetAddressTextField.layer.borderWidth = 0.5
+        streetAddressTextField.layer.cornerRadius = 12
+        streetAddressTextField.clipsToBounds = true
+        specialInstructionsTextField.layer.masksToBounds = false
+        specialInstructionsTextField.layer.borderWidth = 0.5
+        specialInstructionsTextField.layer.cornerRadius = 12
+        specialInstructionsTextField.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
