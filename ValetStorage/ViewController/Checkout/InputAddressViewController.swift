@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InputAddressViewController: UIViewController {
+class InputAddressViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var phoneNumTextField: UITextField!
     
@@ -19,7 +19,10 @@ class InputAddressViewController: UIViewController {
     
     @IBOutlet weak var nextButtonOutlet: UIButton!
     @IBOutlet weak var inputError: UILabel!
+    @IBOutlet weak var contentViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak var scrollView: UIScrollView!
     
+    var frameExtended: Bool = false
     var order: Order!
     
     override func viewDidLoad() {
@@ -51,6 +54,26 @@ class InputAddressViewController: UIViewController {
         specialInstructionsTextField.layer.borderWidth = 0.5
         specialInstructionsTextField.layer.cornerRadius = 12
         specialInstructionsTextField.clipsToBounds = true
+        
+        // add oberserver methods to allow keyboard to dismiss
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        // dismiss keyboard if view is tapped
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+        
+        // UITextFieldDelegate to dismiss keyboard on return and next textfield
+        specialInstructionsTextField.delegate = self
+        specialInstructionsTextField.returnKeyType = .go
+        streetAddressTextField.delegate = self
+        streetAddressTextField.returnKeyType = .next
+        otherAddressTextField.delegate = self
+        otherAddressTextField.returnKeyType = .next
+        streetAddressTextField.tag = 0
+        otherAddressTextField.tag = 1
+        specialInstructionsTextField.tag = 2
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,12 +93,61 @@ class InputAddressViewController: UIViewController {
         }
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AdditionalInfoSegue" {
             let additionalInfoViewController = segue.destination as! AdditionalInfoViewController
             additionalInfoViewController.order = order
         }
         
+    }
+    
+    // methods for keyboard
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if !frameExtended {
+            contentViewConstraint.constant = contentViewConstraint.constant + 245
+             self.view.layoutIfNeeded()
+            frameExtended = true
+        }
+        
+       
+    }
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if frameExtended {
+            contentViewConstraint.constant = contentViewConstraint.constant - 245
+            self.view.layoutIfNeeded()
+            frameExtended = false
+        }
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+            let yChange = nextField.frame.minY - 32
+            if nextField == specialInstructionsTextField {
+                scrollView.setContentOffset(CGPoint(x: 0, y: yChange - 100), animated: true)
+            } else {
+                scrollView.setContentOffset(CGPoint(x: 0, y: yChange), animated: true)
+            }
+        } else {
+            // Not found, so remove keyboard.
+            specialInstructionsTextField.resignFirstResponder()
+            // perform next button function
+            if (phoneNumTextField.text?.count)! >= 12 || (phoneNumTextField.text?.count)! == 0 {
+                inputError.text = "Please enter a valid phone number."}
+            else if (zipCodeTextField.text?.count)! > 9 || (zipCodeTextField.text?.prefix(3)) != "787"{
+                inputError.text = "Please Enter a Valid Austin Zipcode."}
+            else if (streetAddressTextField.text?.count) == 0{
+                inputError.text = "Please Input an Address."}
+                
+            else {self.performSegue(withIdentifier: "AdditionalInfoSegue", sender: nil)
+            }
+        }
+        // Do not add a line break
+        return false
     }
 
 }

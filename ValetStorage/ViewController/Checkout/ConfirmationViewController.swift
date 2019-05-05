@@ -33,10 +33,10 @@ class ConfirmationViewController: UIViewController {
         confirmButtonOutlet.clipsToBounds = true
         confirmButtonOutlet.backgroundColor = ColorScheme.valet_blue
         
-        subtotalLabel.text = formatter.string(from: NSNumber(value: order.initialCost))
+        subtotalLabel.text = formatter.string(from: NSNumber(value: order.monthlyCost))
         taxLabel.text = formatter.string(from: NSNumber(value: order.tax))
-        monthlyTotalLabel.text = formatter.string(from: NSNumber(value: order.monthlyCost))
-        totalLabel.text = formatter.string(from: NSNumber(value: order.monthlyCostTotal))
+        monthlyTotalLabel.text = formatter.string(from: NSNumber(value: order.monthlyCostTotal))
+        totalLabel.text = formatter.string(from: NSNumber(value: order.initialCost))
         // assign date
         // dateLabel.text = order.pickupDate
     }
