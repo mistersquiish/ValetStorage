@@ -10,12 +10,35 @@ import UIKit
 
 class ConfirmationViewController: UIViewController {
     
+    @IBOutlet weak var subtotalLabel: UILabel!
+    @IBOutlet weak var taxLabel: UILabel!
+    @IBOutlet weak var monthlyTotalLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var confirmButtonOutlet: UIButton!
+    
     var order: Order!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
 
-        // Do any additional setup after loading the view.
+        // UI settings
+        confirmButtonOutlet.layer.masksToBounds = false
+        confirmButtonOutlet.layer.borderWidth = 0.5
+        confirmButtonOutlet.layer.cornerRadius = 12
+        confirmButtonOutlet.clipsToBounds = true
+        confirmButtonOutlet.backgroundColor = ColorScheme.valet_blue
+        
+        subtotalLabel.text = formatter.string(from: NSNumber(value: order.initialCost))
+        taxLabel.text = formatter.string(from: NSNumber(value: order.tax))
+        monthlyTotalLabel.text = formatter.string(from: NSNumber(value: order.monthlyCost))
+        totalLabel.text = formatter.string(from: NSNumber(value: order.monthlyCostTotal))
+        // assign date
+        // dateLabel.text = order.pickupDate
     }
 
     override func didReceiveMemoryWarning() {

@@ -34,6 +34,7 @@ class EnterPaymentViewController: STPAddCardViewController  {
     
     @objc func confirmation(_ sender: UIBarButtonItem) {
         let confirmationViewController = UIStoryboard(name: "Checkout", bundle: nil).instantiateViewController(withIdentifier: "Confirmation") as! ConfirmationViewController
+        confirmationViewController.order = order
         navigationController?.pushViewController(confirmationViewController, animated: true)
     }
 }

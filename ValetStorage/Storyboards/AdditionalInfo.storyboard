@@ -178,21 +178,10 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="ael-Th-Vxe"/>
-                    <connections>
-                        <segue destination="xu9-GK-G4E" kind="show" identifier="CheckoutSegue" id="WQ3-JD-bmL"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qy8-sW-LDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2628" y="-9.4452773613193415"/>
-        </scene>
-        <!--Checkout-->
-        <scene sceneID="z7g-XC-yn2">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Checkout" storyboardName="Checkout" referencedIdentifier="Checkout" id="xu9-GK-G4E" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5uL-XR-ume" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3477" y="47"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mnP-44-7tS">
