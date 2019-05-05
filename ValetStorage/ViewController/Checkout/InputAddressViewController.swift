@@ -69,5 +69,13 @@ class InputAddressViewController: UIViewController {
             self.performSegue(withIdentifier: "AdditionalInfoSegue", sender: nil)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AdditionalInfoSegue" {
+            let additionalInfoViewController = segue.destination as! AdditionalInfoViewController
+            additionalInfoViewController.order = order
+        }
+        
+    }
 
 }

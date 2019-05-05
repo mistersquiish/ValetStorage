@@ -132,6 +132,13 @@ class PricingViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "InputAddressSegue" {
             let inputAddressViewController = segue.destination as! InputAddressViewController
+            if orderType.name == "Bins" {
+                order.boxQuantity = Int(quantityLabel.text!)
+            }
+            order.initialCost = monthlyTotal * 3
+            order.tax = tax
+            order.monthlyCost = subtotal
+            order.monthlyCostTotal = monthlyTotal
             inputAddressViewController.order = order
         }
         

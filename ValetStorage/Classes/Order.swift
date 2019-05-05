@@ -18,7 +18,7 @@ class Order {
     var monthlyCostTotal: Float!
     var deliveryZipCode: Int!
     var deliveryAddress1: String!
-    var dilveryAddress2: String!
+    var delveryAddress2: String!
     var deliveryCity: String!
     var pickupZipCode: Int!
     var pickupAddress1: String!
