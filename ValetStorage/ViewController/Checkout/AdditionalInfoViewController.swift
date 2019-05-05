@@ -74,7 +74,9 @@ class AdditionalInfoViewController: UICollectionViewController, nextButtonDelega
         }
         
         if allChecked {
-            self.performSegue(withIdentifier: "CheckoutSegue", sender: nil)
+            let checkoutViewController = EnterPaymentViewController()
+            checkoutViewController.order = order
+            self.navigationController?.pushViewController(checkoutViewController, animated: true)
         }
     }
     
