@@ -60,14 +60,15 @@ class InputAddressViewController: UIViewController {
     
     @IBAction func nextButton(_ sender: Any) {
         if (phoneNumTextField.text?.count)! >= 12 || (phoneNumTextField.text?.count)! == 0 {
-            inputError.text = "Enter a valid phone number."
-        } else if (zipCodeTextField.text?.count)! > 9 && (zipCodeTextField.text?.prefix(4) != "787") {
-            inputError.text = "Enter a valid Austin zip code."
-        } else if (streetAddressTextField.text?.count) == 0{
-            inputError.text = "Please Input an Address."
-        } else {
-            self.performSegue(withIdentifier: "AdditionalInfoSegue", sender: nil)
+            inputError.text = "Please enter a valid phone number."}
+        else if (zipCodeTextField.text?.count)! > 9 || (zipCodeTextField.text?.prefix(3)) != "787"{
+            inputError.text = "Please Enter a Valid Austin Zipcode."}
+        else if (streetAddressTextField.text?.count) == 0{
+            inputError.text = "Please Input an Address."}
+        
+        else {self.performSegue(withIdentifier: "AdditionalInfoSegue", sender: nil)
         }
     }
 
 }
+
