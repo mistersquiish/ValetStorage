@@ -136,7 +136,7 @@ class InputAddressViewController: UIViewController, UITextFieldDelegate {
             // Not found, so remove keyboard.
             specialInstructionsTextField.resignFirstResponder()
             // perform next button function
-            if (phoneNumTextField.text?.count)! >= 12 || (phoneNumTextField.text?.count)! == 0 {
+            if (phoneNumTextField.text?.count)! <= 6 || (phoneNumTextField.text?.count)! >= 12 || (phoneNumTextField.text?.count)! == 0 {
                 inputError.text = "Please enter a valid phone number."}
             else if (zipCodeTextField.text?.count)! > 9 || (zipCodeTextField.text?.prefix(3)) != "787"{
                 inputError.text = "Please Enter a Valid Austin Zipcode."}
