@@ -47,6 +47,7 @@ class PricingViewController: UIViewController {
         nextButtonOutlet.clipsToBounds = true
         nextButtonOutlet.backgroundColor = ColorScheme.valet_orange
         optionDescriptionLabel.text = orderType.pricingDescription
+        optionNameLabel.text = orderType.name
         // if option is 'Bins', use the secondary image
         if orderType.id == "5b5837ba4da6f3c0e03134bf" {
             optionImageView.image = orderType.optionsImage2

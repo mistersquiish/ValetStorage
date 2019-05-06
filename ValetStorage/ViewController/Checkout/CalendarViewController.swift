@@ -4,6 +4,7 @@ import UIKit
 import JTAppleCalendar
 class CalendarViewController: UIViewController {
 
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var nextButtonOutlet: UIButton!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var dateLabelITF: UILabel!
