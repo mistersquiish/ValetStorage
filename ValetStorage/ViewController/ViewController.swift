@@ -4,6 +4,7 @@ import UIKit
 import JTAppleCalendar
 class ViewController: UIViewController {
 
+    @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var dateLabelITF: UILabel!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     let formatter = DateFormatter()
@@ -26,6 +27,20 @@ class ViewController: UIViewController {
         self.calendarView.selectDates([ Date() ])
         
     }
+       /* Helper function to setup the Months and Years */
+    func setupViewsOfCalendar (from visibleDates: DateSegmentInfo) {
+        let date = visibleDates.monthDates.first!.date
+        
+        formatter.dateFormat = "yyyy"
+//      If you want to add year later
+//        year.text = formatter.string(from: date)
+        
+        formatter.dateFormat = "MMMM"
+        monthLabel.text = formatter.string(from: date)
+    }
+    
+    
+    
     
     // Configure the cell
     func configureCell(cell: JTAppleCell?, cellState: CellState) {
@@ -130,6 +145,11 @@ extension ViewController:JTAppleCalendarViewDelegate{
         print("Current Date",Date())
         print("Just date", date)
         return date >= Date()
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView,
+                  didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+        setupViewsOfCalendar(from: visibleDates)
     }
     
     
