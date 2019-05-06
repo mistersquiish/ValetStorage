@@ -2,13 +2,15 @@
 
 import UIKit
 import JTAppleCalendar
-class ViewController: UIViewController {
+class CalendarViewController: UIViewController {
 
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var dateLabelITF: UILabel!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     let formatter = DateFormatter()
     let numberOfRows = 6
+    
+    var order: Order!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -92,7 +94,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: JTAppleCalendarViewDataSource{
+extension CalendarViewController: JTAppleCalendarViewDataSource{
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
         
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CalendarCell", for: indexPath) as! CalendarCell
@@ -125,7 +127,7 @@ extension ViewController: JTAppleCalendarViewDataSource{
     
 }
 
-extension ViewController:JTAppleCalendarViewDelegate{
+extension CalendarViewController:JTAppleCalendarViewDelegate{
     
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         

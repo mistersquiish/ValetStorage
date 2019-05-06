@@ -44,8 +44,8 @@
 		C46FFA47227FF9C3004A831B /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FFA42227FF9C2004A831B /* CalendarCell.swift */; };
 		C46FFA48227FF9C3004A831B /* CalendarSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FFA44227FF9C3004A831B /* CalendarSectionHeaderView.swift */; };
 		C46FFA49227FF9C3004A831B /* CalendarSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46FFA45227FF9C3004A831B /* CalendarSectionHeaderView.xib */; };
-		C46FFA4A227FF9C3004A831B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FFA46227FF9C3004A831B /* ViewController.swift */; };
-		C46FFA4C227FF9D5004A831B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46FFA4B227FF9D5004A831B /* Main.storyboard */; };
+		C46FFA4A227FF9C3004A831B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FFA46227FF9C3004A831B /* CalendarViewController.swift */; };
+		C46FFA4C227FF9D5004A831B /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46FFA4B227FF9D5004A831B /* Calendar.storyboard */; };
 		C4884EC42255283B0002D71D /* WalkThroughContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4884EC32255283B0002D71D /* WalkThroughContentController.swift */; };
 		C4884EC6225539B30002D71D /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4884EC5225539B30002D71D /* WalkthroughPageViewController.swift */; };
 		C4BD420E22599710005843F4 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD420D22599710005843F4 /* WalkThroughViewController.swift */; };
@@ -117,8 +117,8 @@
 		C46FFA42227FF9C2004A831B /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		C46FFA44227FF9C3004A831B /* CalendarSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSectionHeaderView.swift; sourceTree = "<group>"; };
 		C46FFA45227FF9C3004A831B /* CalendarSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarSectionHeaderView.xib; sourceTree = "<group>"; };
-		C46FFA46227FF9C3004A831B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C46FFA4B227FF9D5004A831B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C46FFA46227FF9C3004A831B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		C46FFA4B227FF9D5004A831B /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		C4884EC32255283B0002D71D /* WalkThroughContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughContentController.swift; sourceTree = "<group>"; };
 		C4884EC5225539B30002D71D /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		C4BD420D22599710005843F4 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 				2870E023227670ED00D2F8C5 /* InputAddress.storyboard */,
 				2801E8B72277703E00D1D29E /* AdditionalInfo.storyboard */,
 				28055FDA227C0E8B00E47D60 /* Checkout.storyboard */,
-				C46FFA4B227FF9D5004A831B /* Main.storyboard */,
+				C46FFA4B227FF9D5004A831B /* Calendar.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -195,6 +195,7 @@
 		2832F248225D9D4900814669 /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
+				C46FFA46227FF9C3004A831B /* CalendarViewController.swift */,
 				289E7E18226EDB3F00797FFA /* PricingViewController.swift */,
 				289E7E20226EDDAC00797FFA /* OptionsCollectionViewController.swift */,
 				2870E025227677E000D2F8C5 /* InputAddressViewController.swift */,
@@ -209,6 +210,8 @@
 		28867C4F226E5EA6005D6742 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C46FFA42227FF9C2004A831B /* CalendarCell.swift */,
+				C46FFA43227FF9C3004A831B /* Header */,
 				289E7E1E226EDD3E00797FFA /* OptionsCollectionCell.swift */,
 				28826AFE227BF52400DF2F49 /* AdditionalInfoCell.swift */,
 				28055FDC227C0F5000E47D60 /* NextButtonFooterView.swift */,
@@ -308,9 +311,6 @@
 		C4884EC0225527CA0002D71D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C46FFA42227FF9C2004A831B /* CalendarCell.swift */,
-				C46FFA43227FF9C3004A831B /* Header */,
-				C46FFA46227FF9C3004A831B /* ViewController.swift */,
 				2832F248225D9D4900814669 /* Checkout */,
 				C4729708225E4232000461B3 /* WalkThrough */,
 				28055B64225A83AF001104B4 /* Login */,
@@ -441,7 +441,7 @@
 				289E7E1B226EDB8200797FFA /* Pricing.storyboard in Resources */,
 				C4267C78225E4FF000F828DC /* Onboarding.storyboard in Resources */,
 				28055FDB227C0E8B00E47D60 /* Checkout.storyboard in Resources */,
-				C46FFA4C227FF9D5004A831B /* Main.storyboard in Resources */,
+				C46FFA4C227FF9D5004A831B /* Calendar.storyboard in Resources */,
 				2832F247225D9CCA00814669 /* PurchasingOptions.storyboard in Resources */,
 				2801E8B82277703E00D1D29E /* AdditionalInfo.storyboard in Resources */,
 				28A1810F225B0E8F0085B5C9 /* Login.storyboard in Resources */,
@@ -573,7 +573,7 @@
 				28BE7CE722541D0900C4DCE9 /* AppDelegate.swift in Sources */,
 				28A1811A225B0F330085B5C9 /* LoginService.swift in Sources */,
 				28E32267227E669600F69DF1 /* EnterPaymentViewController.swift in Sources */,
-				C46FFA4A227FF9C3004A831B /* ViewController.swift in Sources */,
+				C46FFA4A227FF9C3004A831B /* CalendarViewController.swift in Sources */,
 				28826B01227BF70A00DF2F49 /* AdditionalInfoViewController.swift in Sources */,
 				C4884EC6225539B30002D71D /* WalkthroughPageViewController.swift in Sources */,
 				C46FFA48227FF9C3004A831B /* CalendarSectionHeaderView.swift in Sources */,

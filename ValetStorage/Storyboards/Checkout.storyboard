@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Month Total:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuN-UE-ehF">
-                                                <rect key="frame" x="112.5" y="212" width="150" height="34"/>
+                                                <rect key="frame" x="113" y="212" width="149.5" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="149.5" id="sRD-CY-Hdw"/>
                                                     <constraint firstAttribute="height" constant="34" id="vde-bI-93i"/>
@@ -120,7 +120,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gD-3H-HjJ">
-                                                <rect key="frame" x="135" y="308" width="105.5" height="27.5"/>
+                                                <rect key="frame" x="135.5" y="308" width="105" height="27.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -228,7 +228,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$643.01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgG-Rl-iag">
-                                                <rect key="frame" x="112.5" y="254" width="150" height="22"/>
+                                                <rect key="frame" x="113" y="254" width="149.5" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -253,7 +253,6 @@
                                             <constraint firstItem="0gD-3H-HjJ" firstAttribute="centerX" secondItem="A17-H8-rLn" secondAttribute="centerX" constant="17.25" id="0bF-8K-CZo"/>
                                             <constraint firstItem="osv-g9-Gjm" firstAttribute="leading" secondItem="WX7-S7-z6X" secondAttribute="leading" constant="16" id="2gC-yW-BU0"/>
                                             <constraint firstItem="RuN-UE-ehF" firstAttribute="centerX" secondItem="A17-H8-rLn" secondAttribute="centerX" constant="17" id="8ra-Sa-2LP"/>
-                                            <constraint firstItem="osv-g9-Gjm" firstAttribute="centerX" secondItem="0gD-3H-HjJ" secondAttribute="centerX" id="9fz-lE-WR7"/>
                                             <constraint firstItem="DgG-Rl-iag" firstAttribute="leading" secondItem="RuN-UE-ehF" secondAttribute="leading" id="AeS-wo-Y34"/>
                                             <constraint firstItem="SEc-xK-GW2" firstAttribute="trailing" secondItem="A17-H8-rLn" secondAttribute="trailing" id="BU6-Aa-HSQ"/>
                                             <constraint firstItem="yM6-JV-kvT" firstAttribute="leading" secondItem="SEc-xK-GW2" secondAttribute="leading" id="FRB-qI-JMq"/>

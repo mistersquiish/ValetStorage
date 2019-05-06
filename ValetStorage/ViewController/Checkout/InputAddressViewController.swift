@@ -89,15 +89,15 @@ class InputAddressViewController: UIViewController, UITextFieldDelegate {
         else if (streetAddressTextField.text?.count) == 0{
             inputError.text = "Please Input an Address."}
         
-        else {self.performSegue(withIdentifier: "AdditionalInfoSegue", sender: nil)
+        else {self.performSegue(withIdentifier: "CalendarSegue", sender: nil)
         }
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AdditionalInfoSegue" {
-            let additionalInfoViewController = segue.destination as! AdditionalInfoViewController
-            additionalInfoViewController.order = order
+            let calendarViewController = segue.destination as! CalendarViewController
+            calendarViewController.order = order
         }
         
     }
@@ -143,7 +143,7 @@ class InputAddressViewController: UIViewController, UITextFieldDelegate {
             else if (streetAddressTextField.text?.count) == 0{
                 inputError.text = "Please Input an Address."}
                 
-            else {self.performSegue(withIdentifier: "AdditionalInfoSegue", sender: nil)
+            else {self.performSegue(withIdentifier: "CalendarSegue", sender: nil)
             }
         }
         // Do not add a line break
