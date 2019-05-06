@@ -4,6 +4,7 @@ import UIKit
 import JTAppleCalendar
 class CalendarViewController: UIViewController {
 
+    @IBOutlet weak var nextButtonOutlet: UIButton!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var dateLabelITF: UILabel!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
@@ -92,6 +93,20 @@ class CalendarViewController: UIViewController {
             currentCell.bgView.isHidden = true
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AdditionalInfoSegue" {
+            let additionalInfoViewController = segue.destination as! AdditionalInfoViewController
+            additionalInfoViewController.order = order
+        }
+        
+    }
+    
+    @IBAction func nextButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "AdditionalInfoSegue", sender: nil)
+    }
+    
+    
 }
 
 extension CalendarViewController: JTAppleCalendarViewDataSource{
@@ -123,7 +138,6 @@ extension CalendarViewController: JTAppleCalendarViewDataSource{
                                 hasStrictBoundaries: true)
         return parameters
     }
-    
     
 }
 
@@ -162,6 +176,8 @@ extension CalendarViewController:JTAppleCalendarViewDelegate{
                   didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setupViewsOfCalendar(from: visibleDates)
     }
+    
+
     
     
     

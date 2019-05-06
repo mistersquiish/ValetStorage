@@ -188,9 +188,12 @@
                                     <constraint firstAttribute="height" constant="50" id="CZz-Ko-JYG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YAU-T9-RLe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -213,6 +216,8 @@
                         <outlet property="calendarView" destination="gaW-aB-hHo" id="nsb-H0-XmP"/>
                         <outlet property="dateLabelITF" destination="zna-8G-lEy" id="jic-Sy-AeO"/>
                         <outlet property="monthLabel" destination="fUR-w9-IOf" id="ZHc-3N-ETV"/>
+                        <outlet property="nextButtonOutlet" destination="K6C-Us-zTP" id="d2d-Dw-mDK"/>
+                        <segue destination="rsr-8M-mTy" kind="show" identifier="AdditionalInfoSegue" id="aYN-E8-9Sn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
