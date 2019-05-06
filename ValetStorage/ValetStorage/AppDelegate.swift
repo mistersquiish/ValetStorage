@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         if TokenKeychain.hasToken() {
-            let storyboard = UIStoryboard(name: "PurchasingOptions", bundle: nil)
-            let optionsViewControllers = storyboard.instantiateViewController(withIdentifier: "OptionsView")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let optionsViewControllers = storyboard.instantiateViewController(withIdentifier: "OptionsView2")
             window?.rootViewController = optionsViewControllers
         }
         

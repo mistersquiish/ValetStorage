@@ -1,18 +1,28 @@
 PODS:
   - Alamofire (4.8.2)
+  - JTAppleCalendar (7.1.7)
   - Stripe (15.0.0)
   - SwiftKeychainWrapper (3.2.0)
 
 DEPENDENCIES:
   - Alamofire
+  - JTAppleCalendar
   - Stripe
   - SwiftKeychainWrapper
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - JTAppleCalendar
+    - Stripe
+    - SwiftKeychainWrapper
+
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  JTAppleCalendar: 96da4d8388fa6dc82d6a60d41ef36a015e167e2f
   Stripe: 312b22a67af9fa55c246d26148b3f3a9636a0ff2
   SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: 996f29a16dd38b4ffa1b9d3031c027ab16c7ba81
+PODFILE CHECKSUM: b271a43ae65f45d7275159710b6e510aee8bae84
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.1

@@ -9,6 +9,7 @@ target 'ValetStorage' do
   pod 'Alamofire'
   pod 'SwiftKeychainWrapper'
   pod 'Stripe'
+  pod 'JTAppleCalendar'
 
   target 'ValetStorageTests' do
     inherit! :search_paths
