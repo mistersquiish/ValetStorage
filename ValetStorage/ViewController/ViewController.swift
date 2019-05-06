@@ -26,6 +26,11 @@ class ViewController: UIViewController {
         self.calendarView.scrollToDate(Date(),animateScroll: false)
         self.calendarView.selectDates([ Date() ])
         
+        calendarView.visibleDates{ (visibleDates) in
+            self.setupViewsOfCalendar(from: visibleDates)
+        }
+        
+        
     }
        /* Helper function to setup the Months and Years */
     func setupViewsOfCalendar (from visibleDates: DateSegmentInfo) {
@@ -132,9 +137,13 @@ extension ViewController:JTAppleCalendarViewDelegate{
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         configureCell(cell: cell, cellState: cellState)
+        formatter.dateFormat = "MM-dd-yyyy"        
+        // Reformats current date for usage by dateLabelTF
+        formatter.dateFormat = "EEEE, MMMM dd"
         let labelDate = formatter.string(from: date)
-            dateLabelITF.text = labelDate
-            print(labelDate)
+        dateLabelITF.text = labelDate
+        print(labelDate)
+        
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
