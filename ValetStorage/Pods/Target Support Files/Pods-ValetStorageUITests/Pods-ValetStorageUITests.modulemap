@@ -1,6 +1,0 @@
-framework module Pods_ValetStorageUITests {
-  umbrella header "Pods-ValetStorageUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
