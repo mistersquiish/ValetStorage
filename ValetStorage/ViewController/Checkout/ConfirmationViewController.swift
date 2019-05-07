@@ -38,7 +38,10 @@ class ConfirmationViewController: UIViewController {
         monthlyTotalLabel.text = formatter.string(from: NSNumber(value: order.monthlyCostTotal))
         totalLabel.text = formatter.string(from: NSNumber(value: order.initialCost))
         // assign date
-        // dateLabel.text = order.pickupDate
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM, dd"
+        dateLabel.text = dateFormatter.string(from: order.pickupDate)
+        timeLabel.text = order.pickupTime
     }
 
     override func didReceiveMemoryWarning() {
