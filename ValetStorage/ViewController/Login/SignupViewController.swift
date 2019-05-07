@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftKeychainWrapper
-import Hero
 
 class SignupViewController: UIViewController, UITextFieldDelegate {
 

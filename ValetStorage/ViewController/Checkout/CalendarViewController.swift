@@ -10,7 +10,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var dateLabelITF: UILabel!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     let formatter = DateFormatter()
-    let numberOfRows = 6
+    let numberOfRows = 5
     
     var order: Order!
     override func viewDidLoad() {
@@ -20,7 +20,6 @@ class CalendarViewController: UIViewController {
         
         // UI settings
         nextButtonOutlet.layer.masksToBounds = false
-        nextButtonOutlet.layer.borderWidth = 0.5
         nextButtonOutlet.layer.cornerRadius = 12
         nextButtonOutlet.clipsToBounds = true
         nextButtonOutlet.backgroundColor = ColorScheme.valet_orange
@@ -78,10 +77,10 @@ class CalendarViewController: UIViewController {
             return
         }
         if cellState.isSelected{
-            currentCell.dateLabel.textColor = UIColor.black
+            currentCell.dateLabel.textColor = UIColor.white
         }else{
             if cellState.dateBelongsTo == .thisMonth && cellState.date > Date()  {
-                currentCell.dateLabel.textColor = UIColor.white
+                currentCell.dateLabel.textColor = UIColor.black
             }else{
                 currentCell.dateLabel.textColor = UIColor.gray
             }
