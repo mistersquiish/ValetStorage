@@ -17,6 +17,13 @@ class CalendarViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         configureCalendarView()
+        
+        // UI settings
+        nextButtonOutlet.layer.masksToBounds = false
+        nextButtonOutlet.layer.borderWidth = 0.5
+        nextButtonOutlet.layer.cornerRadius = 12
+        nextButtonOutlet.clipsToBounds = true
+        nextButtonOutlet.backgroundColor = ColorScheme.valet_orange
     }
     
     func configureCalendarView(){
@@ -98,13 +105,17 @@ class CalendarViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AdditionalInfoSegue" {
             let additionalInfoViewController = segue.destination as! AdditionalInfoViewController
+            formatter.dateFormat = "HH:mm a"
+            order.pickupTime = formatter.string(from: datePicker.date)
             additionalInfoViewController.order = order
         }
         
     }
     
     @IBAction func nextButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "AdditionalInfoSegue", sender: nil)
+        if order.pickupDate != nil {
+             self.performSegue(withIdentifier: "AdditionalInfoSegue", sender: nil)
+        }
     }
     
     
@@ -154,12 +165,12 @@ extension CalendarViewController:JTAppleCalendarViewDelegate{
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         configureCell(cell: cell, cellState: cellState)
-        formatter.dateFormat = "MM-dd-yyyy"        
+        
         // Reformats current date for usage by dateLabelTF
         formatter.dateFormat = "EEEE, MMMM dd"
         let labelDate = formatter.string(from: date)
         dateLabelITF.text = labelDate
-        print(labelDate)
+        order.pickupDate = date
         
     }
     
