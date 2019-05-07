@@ -8,8 +8,11 @@
 
 import UIKit
 import SwiftKeychainWrapper
+import Hero
 
 class SignupViewController: UIViewController, UITextFieldDelegate {
+
+    
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -23,6 +26,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var BottomConstraintLogo: NSLayoutConstraint!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // UI settings
         signupButtonOutlet.backgroundColor = ColorScheme.valet_blue

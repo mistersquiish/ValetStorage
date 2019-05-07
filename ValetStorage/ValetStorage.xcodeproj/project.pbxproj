@@ -35,7 +35,6 @@
 		28BE7CFF22541D0A00C4DCE9 /* ValetStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7CFE22541D0A00C4DCE9 /* ValetStorageTests.swift */; };
 		28BE7D0A22541D0A00C4DCE9 /* ValetStorageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE7D0922541D0A00C4DCE9 /* ValetStorageUITests.swift */; };
 		28DBE7C3227F85B0006A02AF /* OrderPlacedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBE7C2227F85B0006A02AF /* OrderPlacedViewController.swift */; };
-		28DBE7C5227F86AF006A02AF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBE7C4227F86AF006A02AF /* Card.swift */; };
 		28E32267227E669600F69DF1 /* EnterPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E32266227E669600F69DF1 /* EnterPaymentViewController.swift */; };
 		28E3226B227E6E1100F69DF1 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E3226A227E6E1100F69DF1 /* ConfirmationViewController.swift */; };
 		32B8A5236EF2EC1E5ED10216 /* Pods_ValetStorageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50B55AEFDE90511A9F883FB /* Pods_ValetStorageTests.framework */; };
@@ -107,7 +106,6 @@
 		28BE7D0922541D0A00C4DCE9 /* ValetStorageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValetStorageUITests.swift; sourceTree = "<group>"; };
 		28BE7D0B22541D0A00C4DCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28DBE7C2227F85B0006A02AF /* OrderPlacedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPlacedViewController.swift; sourceTree = "<group>"; };
-		28DBE7C4227F86AF006A02AF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		28E32266227E669600F69DF1 /* EnterPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPaymentViewController.swift; sourceTree = "<group>"; };
 		28E3226A227E6E1100F69DF1 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		66F15BB24F8D1229B8FDA52B /* Pods_ValetStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,7 +213,6 @@
 				289E7E1E226EDD3E00797FFA /* OptionsCollectionCell.swift */,
 				28826AFE227BF52400DF2F49 /* AdditionalInfoCell.swift */,
 				28055FDC227C0F5000E47D60 /* NextButtonFooterView.swift */,
-				28DBE7C4227F86AF006A02AF /* Card.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -560,7 +557,6 @@
 				28E3226B227E6E1100F69DF1 /* ConfirmationViewController.swift in Sources */,
 				28BCF7B82273AA0C00FE570F /* CustomAlamoManager.swift in Sources */,
 				28A18119225B0F330085B5C9 /* TokenKeychain.swift in Sources */,
-				28DBE7C5227F86AF006A02AF /* Card.swift in Sources */,
 				2870E026227677E000D2F8C5 /* InputAddressViewController.swift in Sources */,
 				289E7E21226EDDAC00797FFA /* OptionsCollectionViewController.swift in Sources */,
 				28A1811E225B0F4E0085B5C9 /* SignupViewController.swift in Sources */,

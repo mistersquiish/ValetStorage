@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoName" translatesAutoresizingMaskIntoConstraints="NO" id="uvs-5o-55B">
-                                <rect key="frame" x="16" y="80" width="343" height="150"/>
+                                <rect key="frame" x="16" y="80" width="343.00000000000091" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="bJX-xb-nw7"/>
                                 </constraints>
@@ -97,6 +97,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="npO-GQ-hn8"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="BottomConstraintLogo" destination="bec-Xu-3al" id="BKU-EM-HNB"/>
                         <outlet property="TopConstraintLogo" destination="Gct-l6-sEo" id="D8o-gZ-zqw"/>
@@ -130,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoName" translatesAutoresizingMaskIntoConstraints="NO" id="iGr-Lt-Gid">
-                                <rect key="frame" x="16" y="80" width="343" height="150"/>
+                                <rect key="frame" x="16" y="80" width="343.00000000000091" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="ZlZ-rb-wG4"/>
                                 </constraints>
@@ -221,6 +224,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZH0-jG-CRf"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="BottomConstraintLogo" destination="uFV-vw-693" id="hEc-Zd-vsu"/>
                         <outlet property="TopConstraintLogo" destination="8y2-pS-6V5" id="K3q-Q0-Iom"/>

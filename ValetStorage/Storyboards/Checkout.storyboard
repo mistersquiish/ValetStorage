@@ -325,7 +325,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXr-fg-zfo" customClass="CardView" customModule="ValetStorage" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXr-fg-zfo">
                                 <rect key="frame" x="32" y="70" width="311" height="358"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will receive an email confirmation shortly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBz-NY-kBn">
@@ -393,7 +393,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonOutlet" destination="Uni-zH-zZh" id="Ha6-ih-MEh"/>
-                        <outlet property="cardView" destination="gXr-fg-zfo" id="d9J-AC-g5S"/>
+                        <outlet property="cardView" destination="gXr-fg-zfo" id="sfu-XC-woC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7M0-WM-w9T" userLabel="First Responder" sceneMemberID="firstResponder"/>

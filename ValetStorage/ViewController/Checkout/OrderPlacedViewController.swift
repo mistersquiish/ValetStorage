@@ -9,8 +9,9 @@
 import UIKit
 
 class OrderPlacedViewController: UIViewController {
-
-    @IBOutlet weak var cardView: CardView!
+    
+    
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var buttonOutlet: UIButton!
     
     override func viewDidLoad() {

@@ -105,7 +105,7 @@ class InputAddressViewController: UIViewController, UITextFieldDelegate {
     // methods for keyboard
     @objc func keyboardWillShow(notification: NSNotification) {
         if !frameExtended {
-            contentViewConstraint.constant = contentViewConstraint.constant + 245
+            contentViewConstraint.constant = contentViewConstraint.constant + 275
              self.view.layoutIfNeeded()
             frameExtended = true
         }
@@ -114,7 +114,7 @@ class InputAddressViewController: UIViewController, UITextFieldDelegate {
     }
     @objc func keyboardWillHide(notification: NSNotification) {
         if frameExtended {
-            contentViewConstraint.constant = contentViewConstraint.constant - 245
+            contentViewConstraint.constant = contentViewConstraint.constant - 275
             self.view.layoutIfNeeded()
             frameExtended = false
         }

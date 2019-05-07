@@ -116,8 +116,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
             LoginService.login(email: emailTextField.text!, password: passwordTextField.text!, completion: { () -> () in
                 if TokenKeychain.hasToken() {
                     self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
+                } else {
+                    self.updateFormFeedback()
                 }
-                self.updateFormFeedback()
             })
         }
         // Do not add a line break

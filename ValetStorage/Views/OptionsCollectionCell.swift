@@ -26,13 +26,7 @@ class OptionsCollectionCell: UICollectionViewCell {
         self.layer.masksToBounds = false
         self.layer.cornerRadius = 10
         self.clipsToBounds = true
-        
-        // Shadow effect
-        self.layer.masksToBounds = false
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.3
-        self.layer.shadowOffset = CGSize(width: -2, height: 2)
-        self.layer.shadowRadius = self.contentView.layer.cornerRadius
+
     }
     
     override var isHighlighted: Bool {
