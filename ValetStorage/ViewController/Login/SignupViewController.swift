@@ -44,7 +44,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         nameTextField.layer.cornerRadius = 12
         nameTextField.clipsToBounds = true
         signupButtonOutlet.layer.masksToBounds = false
-        signupButtonOutlet.layer.borderWidth = 0.5
         signupButtonOutlet.layer.cornerRadius = 12
         signupButtonOutlet.clipsToBounds = true
         

@@ -22,7 +22,6 @@ class OrderPlacedViewController: UIViewController {
         
         // UI settings
         buttonOutlet.layer.masksToBounds = false
-        buttonOutlet.layer.borderWidth = 0.5
         buttonOutlet.layer.cornerRadius = 12
         buttonOutlet.clipsToBounds = true
         buttonOutlet.backgroundColor = ColorScheme.valet_blue

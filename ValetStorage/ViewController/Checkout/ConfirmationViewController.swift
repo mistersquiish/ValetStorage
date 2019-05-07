@@ -28,7 +28,6 @@ class ConfirmationViewController: UIViewController {
 
         // UI settings
         confirmButtonOutlet.layer.masksToBounds = false
-        confirmButtonOutlet.layer.borderWidth = 0.5
         confirmButtonOutlet.layer.cornerRadius = 12
         confirmButtonOutlet.clipsToBounds = true
         confirmButtonOutlet.backgroundColor = ColorScheme.valet_blue

@@ -25,7 +25,6 @@ class NextButtonFooterView: UICollectionReusableView {
         super.awakeFromNib()
         // UI settings
         nextButtonOutlet.layer.masksToBounds = false
-        nextButtonOutlet.layer.borderWidth = 0.5
         nextButtonOutlet.layer.cornerRadius = 12
         nextButtonOutlet.clipsToBounds = true
         nextButtonOutlet.backgroundColor = ColorScheme.valet_orange

@@ -30,7 +30,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         signupOutlet.tintColor = ColorScheme.valet_orange
         formFeedbackLabel.alpha = 0
         emailTextField.layer.masksToBounds = false
-        emailTextField.layer.borderWidth = 0.5
         emailTextField.layer.cornerRadius = 12
         emailTextField.clipsToBounds = true
         passwordTextField.layer.masksToBounds = false
