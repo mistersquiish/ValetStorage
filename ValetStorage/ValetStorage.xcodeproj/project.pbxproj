@@ -223,7 +223,7 @@
 				28867C4F226E5EA6005D6742 /* Views */,
 				28055B5D225A8391001104B4 /* Classes */,
 				28055B5A225A8360001104B4 /* Storyboards */,
-				C4884EC0225527CA0002D71D /* ViewController */,
+				C4884EC0225527CA0002D71D /* ViewControllers */,
 				28BE7CE522541D0900C4DCE9 /* ValetStorage */,
 				28BE7CFD22541D0A00C4DCE9 /* ValetStorageTests */,
 				28BE7D0822541D0A00C4DCE9 /* ValetStorageUITests */,
@@ -305,14 +305,14 @@
 			path = WalkThrough;
 			sourceTree = "<group>";
 		};
-		C4884EC0225527CA0002D71D /* ViewController */ = {
+		C4884EC0225527CA0002D71D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				2832F248225D9D4900814669 /* Checkout */,
 				C4729708225E4232000461B3 /* WalkThrough */,
 				28055B64225A83AF001104B4 /* Login */,
 			);
-			path = ViewController;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		F4AFB6F7AC5EF4609E0572F7 /* Frameworks */ = {

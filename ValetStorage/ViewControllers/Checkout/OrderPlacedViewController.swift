@@ -43,7 +43,7 @@ class OrderPlacedViewController: UIViewController {
             self.cardView.frame = self.cardView.frame.offsetBy(dx: 0, dy: -800)
         }, completion: nil)
         
-        UIView.animate(withDuration: 1, delay: 1.75, animations: {
+        UIView.animate(withDuration: 1, delay: 3, animations: {
             self.buttonOutlet.alpha = 1
         }, completion: nil)
     }

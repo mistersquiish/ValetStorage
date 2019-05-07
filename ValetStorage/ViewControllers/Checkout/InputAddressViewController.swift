@@ -73,6 +73,10 @@ class InputAddressViewController: UIViewController, UITextFieldDelegate {
         streetAddressTextField.tag = 0
         otherAddressTextField.tag = 1
         specialInstructionsTextField.tag = 2
+        
+        phoneNumTextField.addTarget(self, action: #selector(phoneNumFieldEditingDidChange), for: UIControlEvents.editingChanged)
+        zipCodeTextField.addTarget(self, action: #selector(zipCodeFieldEditingDidChange), for: UIControlEvents.editingChanged)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -148,6 +152,37 @@ class InputAddressViewController: UIViewController, UITextFieldDelegate {
         // Do not add a line break
         return false
     }
+    
+    @objc func phoneNumFieldEditingDidChange(_ sender: UITextField) {
+        let nums = phoneNumTextField.text!.westernArabicNumeralsOnly
+        
+        if nums.count == 4 {
+            phoneNumTextField.text = "(" + nums.prefix(3) + ") " + nums.suffix(1)
+        } else if nums.count == 7 {
+            let firstHalf = "(" + nums.prefix(3) + ") "
+            let secondHalf = nums.suffix(4).prefix(3) + " "
+            phoneNumTextField.text = firstHalf + secondHalf + nums.suffix(1)
+        } else if nums.count == 10 {
+            zipCodeTextField.becomeFirstResponder()
+        } else if nums.count > 14 {
+            phoneNumTextField.text = String(phoneNumTextField.text!.prefix(14))
+        }
+    }
+    
+    @objc func zipCodeFieldEditingDidChange(_ sender: UITextField) {
+        if zipCodeTextField.text?.count == 5 {
+            streetAddressTextField.becomeFirstResponder()
+        } else if zipCodeTextField.text!.count > 5 {
+            zipCodeTextField.text = String(zipCodeTextField.text!.prefix(5))
+        }
+    }
+}
 
+extension String {
+    var westernArabicNumeralsOnly: String {
+        let pattern = UnicodeScalar("0")..."9"
+        return String(unicodeScalars
+            .compactMap { pattern ~= $0 ? Character($0) : nil })
+    }
 }
 

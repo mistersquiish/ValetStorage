@@ -22,6 +22,8 @@ class OptionsCollectionViewController: UICollectionViewController {
         }
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign out", style: .plain, target: self, action: #selector(signOut))
+        
+        navigationItem.rightBarButtonItem?.tintColor = ColorScheme.valet_blue
     }
 
     override func didReceiveMemoryWarning() {

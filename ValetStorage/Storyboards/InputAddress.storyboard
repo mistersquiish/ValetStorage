@@ -24,7 +24,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNH-Na-asy" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="838"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="XXXXXXXXXX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZ8-iF-xD9">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="(xxx) xxx xxxxx" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZ8-iF-xD9">
                                                 <rect key="frame" x="35" y="107" width="305" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="ToA-Px-x8Q"/>
