@@ -85,7 +85,7 @@ class InputAddressViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func nextButton(_ sender: Any) {
-        if (phoneNumTextField.text?.count)! != 10{
+        if (phoneNumTextField.text?.count)! != 14 {
             inputError.text = "Please enter a valid phone number."}
         else if (zipCodeTextField.text?.count)! > 9 || (zipCodeTextField.text?.prefix(3)) != "787"{
             inputError.text = "Please Enter a Valid Austin Zipcode."}
