@@ -5,11 +5,11 @@
 Created by:
 
 **MIS 374 - Team 7** in Spring 2019
-Henry Vuong
-Armando Torres
-Jerry Sun
-Ross Timm
-Jay Yang
+- Henry Vuong
+- Armando Torres
+- Jerry Sun
+- Ross Timm
+- Jay Yang
 
 
 ## User Stories
@@ -41,7 +41,7 @@ Purchasing Options            |  Pricing  | Input Address
 
 Purchasing Options            |
 :-------------------------:|
-<img src="https://recordit.co/ikDvXAr9Yx.gif" width=250> 
+<img src="https://recordit.co/ikDvXAr9Yx.gif" width=250> |
 
 ## Notes
 
