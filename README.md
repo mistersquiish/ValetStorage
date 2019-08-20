@@ -1,16 +1,47 @@
-# ValetStorage
-MIS 374 - Team 7
+# *Valet Storage*
 
-<img src="https://recordit.co/1ZWo4rURKa.gif" width=250>
+**Valet Storage** is an iOS app version of the https://valet.storage/ site. It was the client project for MIS 374. The app consumes the Node.js backend created by the Valet Storage software development team.
 
-<img src="https://recordit.co/8MnjaT0sye.gif" width=250>
+Created by:
 
-<img src="https://recordit.co/UooqQo1QNs.gif" width=250>
+**MIS 374 - Team 7** in Spring 2019
+Henry Vuong
+Armando Torres
+Jerry Sun
+Ross Timm
+Jay Yang
 
-<img src="https://recordit.co/mWooJUz68w.gif" width=250>
 
-<img src="https://recordit.co/HbBOWUv8DB.gif" width=250>
+## User Stories
 
-<img src="http://g.recordit.co/pu7Fv1kQfi.gif" width=250>
+The following **required** user stories are complete:
 
-<img src="https://recordit.co/ikDvXAr9Yx.gif" width=250>
+- [x] Users are presented with a tutorial screen explaining Valet Storage
+- [x] Users can sign up for an account and is saved to Valet Storage database
+- [x] Users can sign in
+- [x] Users are presented with a list of purchasing options
+- [x] Users input the quantity of items wanted and price is fetched from Valet Storage API
+- [x] Users input their address information
+- [x] Users pick an appropriate date using a calendar and time picker
+- [x] Users enter their credit card information (backend not functional)
+- [x] Users confirm their previous selections
+- [x] Users are presented with a confirmation screen
+- [x] Users have an animated UX experience
+- [ ] Users are charged using the Stripe API
+
+## Video Walkthrough
+
+Tutorail            |  Sign up  | Sign in
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://recordit.co/1ZWo4rURKa.gif" width=250> | <img src="https://recordit.co/8MnjaT0sye.gif" width=250> | <img src="https://recordit.co/UooqQo1QNs.gif" width=250>
+
+Purchasing Options            |  Pricing  | Input Address
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://recordit.co/mWooJUz68w.gif" width=250> | <img src="https://recordit.co/HbBOWUv8DB.gif" width=250> |<img src="http://g.recordit.co/pu7Fv1kQfi.gif" width=250>
+
+Purchasing Options            
+:-------------------------:
+<img src="https://recordit.co/ikDvXAr9Yx.gif" width=250> 
+
+
+
